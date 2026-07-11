@@ -1,0 +1,433 @@
+\documentclass[12pt, a4paper]{article}
+
+%%------------------Preamble------------------%%
+
+    %% 引入Package %%
+\usepackage[margin=2cm]{geometry} % 上下左右距離邊緣3cm
+\usepackage{fancyhdr}   % 頁首頁尾 fancy header
+\usepackage{titling}    % 設定 title,author,date
+\usepackage{mathtools,amsthm,amssymb} % 引入 AMS 數學環境
+\usepackage[shortlabels,inline]{enumitem} %加強 enumerate, itemize 功能
+\usepackage{setspace}
+\usepackage{tcolorbox}
+\usepackage{xcolor} % 用於表格上色
+\usepackage{graphicx}      % 用於縮放表格寬度
+\usepackage{array}
+\usepackage{float} % for [H] float placement
+\tcbuselibrary{breakable}
+\usepackage{tabularx}
+\usepackage{colortbl}
+
+    %% 中文環境，僅限使用 XeLaTeX 編譯器 %%
+\usepackage[CJKmath=true,AutoFakeBold=3,AutoFakeSlant=.2]{xeCJK}
+
+\setCJKmainfont{Noto Serif CJK TC}
+\setCJKsansfont{Noto Sans CJK TC}
+\setCJKmonofont{Noto Sans Mono CJK TC}
+
+\newCJKfontfamily\Kai{Noto Serif CJK TC}
+\newCJKfontfamily\Hei{Noto Sans CJK TC}
+\newCJKfontfamily\NewMing{Noto Serif CJK TC}
+
+\XeTeXlinebreaklocale "zh"
+
+
+
+
+\begin{document}
+
+\title{T2 選擇題解答} % 設定標題
+\author{李原廷} % 設定作者
+\date{\today} % 設定完成日期，也可以使用 \date{\today}
+
+\maketitle
+
+\begin{enumerate}
+
+    \item 若消費某財貨產生外部利益，根據消費該財貨之邊際私人利益及邊際私人成本所自行選擇之消費水準，將比社會最適消費水準：
+    \begin{enumerate}[label=\Alph*.]
+        \item 低
+        \item 高
+        \item 有可能較低亦有可能較高
+        \item 等於社會最適消費水準。
+    \end{enumerate}
+    解答：正的外部性乃經濟行為造成社會效益大於私人效益，由市場機能決定的產量低於社會效率的產出。為達社會最是產出，可採皮古補貼矯正。
+
+    \item 解決日益嚴重的污染問題，政府可採行之經濟誘因制度不包括下列何者？
+    \begin{enumerate}[label=\Alph*.]
+        \item 排放權交易
+        \item 產出減量補貼
+        \item 徵收排放費
+        \item 直接管制污染量。
+    \end{enumerate}
+    解答：當有負的外部性時，如果個人行為無法達到有效率地解決，政府可採下列幾種糾正策略：
+    \begin{itemize}
+        \item 課稅
+        \item 補貼
+        \item 排放費（Emission Fees）
+        \item 總量管制與交易制度（Cap and trade）
+        \item 命令與控制管制（Command-and-contol Regulations）：此方法不為有經濟誘因之管控方式。
+    \end{itemize}
+
+    \item 在完全競爭市場下，如果分別出現了公共財與正外部性的現象時，下列敘述何者正確？
+    \begin{enumerate}[label=\Alph*.]
+        \item 公共財的出現會造成效率的損失，但正外部性則不會
+        \item 由市場自行決定的均衡數量均會大於社會的最適數量
+        \item 均可透過丁波（C. Tiebout）模型來達成社會的最適數量
+        \item 均會造成市場的失靈。
+    \end{enumerate}
+    解答：
+    \begin{enumerate}[label=\Alph*.]
+        \item 錯誤：公共財（因搭便車問題導致供給不足）與正外部性（因私人未將社會效益納入考量而導致產出不足），兩者都會導致資源配置無法達到社會最適境界，因此兩者都會造成效率的損失（無謂損失）。
+        \item  錯誤：剛好相反。
+            \begin{itemize}
+                \item 公共財：因為具有非排他性，消費者會隱藏真實需求（搭便車），導致市場願意提供的數量遠小於社會最適數量（甚至可能完全無人提供）。
+                \item 正外部性：因為私人邊際效益小於社會邊際效益（私人決策不考慮帶給別人的好處），導致市場決定的均衡數量也會小於社會最適數量。
+            \end{itemize}
+        \item 錯誤：丁波模型（Tiebout Model，又稱「用腳投票」）主要是在解釋「地方公共財（Local Public Goods）」的最適提供數量。它假設人們可以透過自由遷徙，選擇最符合自己偏好與稅收水準的社區，進而逼迫地方政府有效率地提供公共財。但通常無法解決全國性公共財（如國防）的問題，以及不用來解決一般的正外部性問題（如打疫苗、教育）。
+        \item 正確：無論是公共財（搭便車問題、非排他性與非獨占性）還是正外部性（私人效益與社會效益不一致），它們都是導致完全競爭市場無法達到資源最適配置的經典原因，因此兩者均屬於「市場失靈」的主要成因。
+    \end{enumerate}
+
+    \item 假設X財貨的需求曲線為 \(P=200-Q\)，且每生產一單位X財貨的邊際成本為50元，同時也會造成30元的邊際外部成本。在完全競爭下，政府以課徵皮古稅來達到社會最適數量時，可獲得多少稅收？
+    \begin{enumerate}[label=\Alph*.]
+        \item 2,400元
+        \item 3,600元
+        \item 4,500元
+        \item 6,000元。
+    \end{enumerate}
+    解答：需求曲線就是 MSB 曲線，即 \(MSB = P = 200 - Q\)。邊際社會成本 (MSC)：等於廠商自己承擔的邊際私人成本 (MPC) 加上轉嫁給社會的邊際外部成本 (MEC)。
+    \begin{align*}
+        MPC &= 50 \\
+        MEC &= 30 \\
+        MSC &= MPC + MEC = 50 + 30
+    \end{align*}
+    設定$MSB = MSC$：
+    \[
+    200 - Q = 80 \Rightarrow Q^* = 120
+    \]
+    皮古稅的設計原理是「將外部成本內部化」。為了讓追求私利的廠商自願將產量從原來的市場均衡點（150單位）減少到社會最適數量（120單位），政府必須針對每一單位的產出，課徵等於該數量下邊際外部成本 (MEC) 的稅。
+    \[
+    \boxed{單位皮古稅率\ t = MEC = 30元/單位。}
+    \]
+    總稅收即為$t\times Q^* = 30 \times 120 = 3,600$
+
+    \item 因供需條件改變造成價格變化，而對部分經濟個體產生負面影響，此類型的外部性，稱為：
+    \begin{enumerate}[label=\Alph*.]
+        \item 網路外部效果
+        \item 所得外部效果
+        \item 金融性外部效果
+        \item 會計性外部效果。
+    \end{enumerate}
+    解答：
+    \begin{enumerate}[1.]
+        \item 實質性外部性（Technological / Real Externality）：這是我們一般常講的外部性（如工廠污染、抽菸的二手菸、種花帶來的香氣等）。它的特徵是某人的行為\textcolor{red}{直接改變}了其他人的生產函數或效用函數，且\textcolor{red}{沒有透過市場價格機能}來反映。這種類型的外部性會導致「市場失靈」，需要政府介入（如課稅或補貼）。
+        \item 金融性外部性（Pecuniary Externality）：當某些人的經濟行為（例如大量人口移入某個城市）改變了市場的供需條件，導致\textcolor{red}{市場價格發生變化}（例如房租大幅上漲），進而對其他沒有參與該行為的個體造成影響（例如原本租屋的當地人必須支付更高的房租，效用受損）。
+    \end{enumerate}
+    沒有(B) 所得外部效果 / (D) 會計性外部效果這兩個經濟學名詞的分類。
+
+    \item 對於用課稅或減產補貼來矯正生產行為的負外部性，下列敘述何者正確？
+    \begin{enumerate}[label=\Alph*.]
+        \item 用課稅所達成的社會最適數量大於用減產補貼所達成的社會最適數量
+        \item 用課稅所達成的社會最適數量小於用減產補貼所達成的社會最適數量
+        \item 用課稅所達成的社會最適數量等於用減產補貼所達成的社會最適數量
+        \item 兩者所達成的最適數量並不一定相同，故無法比較。
+    \end{enumerate}
+    解答：
+    \begin{enumerate}
+        \item 課徵皮古稅（Tax）：
+        \begin{itemize}
+            \item 政府對廠商每生產一單位產品，課徵等於「邊際外部成本（MEC）」的稅（即 \(t = MEC\)）。
+            \item 廠商的邊際私人成本（MPC）會整條往上移動，變成 \(MPC + t\)。
+            \item 新的利潤極大化條件為：邊際私人效益（MPB，通常即為價格 P）等於新的邊際私人成本。
+            \item 此時，廠商的決策條件變為：\(MPB = MPC + t\)。由於 \(t = MEC\)，這個式子就等於 \(MPB = MPC + MEC = MSC\)（邊際社會成本）。
+            \item 結論：廠商為了追求自身利潤極大，會自動將產量縮減至社會最適數量（\(Q^*\)）。
+        \end{itemize}
+        \item 給予減產補貼（Subsidy）：
+        \begin{itemize}
+            \item 政府對廠商「每減少一單位」的產量（相較於原本無管制的市場均衡產量），給予等於「邊際外部成本（MEC）」的補貼（即 \(s = MEC\)）。
+            \item 對廠商而言，現在如果多生產一單位產品，除了要支付原本的生產成本（MPC）之外，還要放棄政府本來會給的補貼（這是一種「機會成本」）。
+            \item 因此，廠商的「實質」邊際私人成本，同樣會整條往上移動，變成 \(MPC + s\)。
+            \item 新的利潤極大化條件同樣為：\(MPB = MPC + s\)。由於 \(s = MEC\)，這個式子依然等於 \(MPB = MPC + MEC = MSC\)。
+            \item 結論： 廠商同樣為了追求自身利潤極大，會自動將產量縮減至社會最適數量（\(Q^*\)）。
+        \end{itemize}
+    \end{enumerate}
+
+    \newpage
+
+    \item 關於總量管制與交易制度的敘述，下列何者錯誤？
+    \begin{enumerate}[label=\Alph*.]
+        \item 無論排放權如何歸屬，社會終將以最低成本達成既定的污染減量
+        \item 排放權交易的誘因終將使各廠商污染減量的邊際成本相同
+        \item 排放權的歸屬將引起廠商間所得重分配的效果
+        \item 污染減量成本低的廠商較有意願購買排放權。
+    \end{enumerate}
+    解答：
+    \vspace{2cm}
+
+    \item 政府為矯正污染，對生產者給予生產減量補貼，下列敘述何者錯誤？
+    \begin{enumerate}[label=\Alph*.]
+        \item 是一種外部成本內部化之矯正措施
+        \item 長期下有可能吸引更多污染性廠商加入生產，而使得社會總污染量提高
+        \item 政府為支付補貼金額，可能增稅，以致造成其他的福利損失
+        \item 此為寇斯定理之應用。
+    \end{enumerate}
+    解答：
+    \begin{itemize}
+        \item (A) 正確。給予生產減量補貼，會讓廠商多生產一單位的「機會成本」增加（因為放棄了補貼）。這實質上是迫使廠商在決策時將社會成本（污染）納入考量，這就是標準的「外部成本內部化」手段。
+        \item 正確。這是減產補貼（Pigouvian Subsidy）在「長期分析」中的致命傷。雖然短期內個別廠商會減少產量，但因為政府給了補貼，這個污染產業的整體利潤反而增加了。在長期，這會吸引更多的新廠商進入該產業，最終可能導致整個產業的總產量和總污染量不減反增。
+        \item 正確。補貼的錢不會憑空產生，政府必須透過課徵其他稅收（如所得稅、消費稅）來籌措財源。而課徵這些稅通常會扭曲市場的相對價格，產生額外的「超額負擔（Excess burden）或無謂損失」。因此，用補貼來解決一個無謂損失（污染），可能會在別處製造出另一個無謂損失。
+        \item 錯誤。寇斯定理（Coase Theorem）的核心精神是：只要產權界定清楚，且交易成本極低，無論產權歸屬於誰，市場上的「私人雙方」可以透過自願性的協商與交易（Bargaining），自動達成資源配置的柏瑞圖最適境界，完全不需要政府介入（不用課稅，也不用補貼）。
+    \end{itemize}
+
+    \item 對外部成本開徵皮古稅（Pigouvian tax）取得稅收，並用以彌補降低所得稅稅率所造成的稅收損失。這種想法一般稱為：
+    \begin{enumerate}[label=\Alph*.]
+        \item 雙重紅利假說（double-dividend hypothesis）
+        \item 寇斯定理（Coase theorem）
+        \item 皮古定理（Pigou theorem）
+        \item 外部性內部化（internalizing）。
+    \end{enumerate}
+    解答：當政府為了矯正污染（負的外部性）而課徵「皮古稅（Pigouvian tax，如碳稅、空污稅）」時，通常會產生兩大好處：
+    \begin{enumerate}
+        \item 第一重紅利（綠色紅利 / 環保紅利）：這是課徵皮古稅最原始的目的。透過對污染行為課稅，將外部成本內部化，迫使廠商減少污染排放，進而改善環境品質，提升社會整體的福利（減少了污染造成的無謂損失）。
+        \item 第二重紅利（經濟紅利 / 效率紅利）：政府課徵皮古稅後，國庫會獲得一筆龐大的新稅收。如果政府將這筆稅收「專款專用」或「統籌運用」，用來降低或取代其他原本會扭曲經濟效率的稅收（Distortionary taxes，如個人所得稅、營利事業所得稅、消費稅等），就能夠：減輕民眾或企業的租稅負擔。降低因為課徵所得稅而產生的「超額負擔」，鼓勵人們增加勞動供給與投資意願。
+    \end{enumerate}
+
+    \item 下列關於外部性的敘述，何者正確？
+    \begin{enumerate}[label=\Alph*.]
+        \item 欲內部化外部性，矯正稅總稅收須等於總外部成本
+        \item 最適污染減量為100\%
+        \item 皮古稅係針對每單位污染所課徵的租稅
+        \item 排放費政策符合成本有效性。
+    \end{enumerate}
+    解答：
+    \begin{itemize}
+        \item (A) 錯誤。要將外部成本內部化，政府課徵的皮古稅（矯正稅）必須滿足「單位稅率等於社會最適產量下的『邊際』外部成本（\(t = MEC\)）」，而不是看「總」額。
+        \item (B) 錯誤。在經濟學中，「最適污染量」幾乎從來不會是零（即最適污染減量不會是 100\%）。因為要將最後一丁點污染完全清除，所需耗費的成本（邊際防治成本 MAC）往往會變成天文數字，遠大於這點污染帶來的損害（邊際損害 MD）。
+        \item (C) 錯誤。 這是一個容易混淆的觀念。在嚴格的經濟學定義中：
+        \begin{itemize}
+            \item 皮古稅（Pigouvian Tax）：通常是針對產生外部性的「產品產量（Output）」來課徵（例如：對每噸鋼鐵課稅）。
+            \item 排放費（Emission Fee / Effluent Charge）：則是直接針對「污染排放量（Pollution）」來課徵（例如：對每噸二氧化碳課稅）。
+        \end{itemize}
+        \item （D）正確。 成本有效性（Cost-effectiveness）的意思是「以最低的社會總成本來達成某個既定的目標（如減碳 20\%）」。
+        \begin{itemize}
+            \item 當政府對排放污染課徵統一的「排放費（Emission Fee）」時，所有廠商都會面臨同一個價格標準。
+            \item 為了追求利潤極大（或成本極小），每一家廠商都會努力減少污染，直到自己的「邊際防治成本（MAC）等於排放費費率」為止。
+            \item 既然所有廠商的 MAC 都等於同一個排放費費率，這就保證了所有廠商的邊際防治成本皆相等（\(MAC_A = MAC_B = ... = Fee\)）。
+        \end{itemize}
+    \end{itemize}
+
+    \item 下列有關網路外部性（network externalities）的敘述，何者錯誤？
+    \begin{enumerate}[label=\Alph*.]
+        \item 網路遊戲玩家的效用因更多玩家參與遊戲而提升，此為正的網路外部性
+        \item 線上影音檔案下載速度會因網路使用人數擴增而減緩，此為負的網路外部性
+        \item 政府不需因某一產品或服務具備正的網路外部性，而提出租稅或補貼等鼓勵措施
+        \item 具備正的網路外部性的產品，經常因閉鎖效果（lock-in effect），而使得產品容易被取代。
+    \end{enumerate}
+    解答：網路外部性指消費者消費某一財貨，所能到的效用高低與該財貨的消費數量無絕對的關係，而是與消費該財貨的消費者人數有關。電話、手機即具此特性，網路設備也是。\\
+    網路外部性會產生規格「標準化」的問題，使得市場中產品的規格會逐漸一致。此外也會產生網路經濟現象中，所謂的閉鎖效應（Lock-in effect），此即部分為市場長久接受而普及性極高的財貨，即便後續有較佳的新產品出現，也難以取代。
+
+
+    \item 個人為了避免感染流感而自費施打疫苗，除可維護自身健康，也可降低其他人感染的機率，此種情況為：
+    \begin{enumerate}[label=\Alph*.]
+        \item 外部經濟
+        \item 外部不經濟
+        \item 外部成本
+        \item 閉鎖效果。
+    \end{enumerate}
+    解答：外部經濟（External Economy） / 正的外部性（Positive Externality）：當一個人的消費或生產行為，對「沒有參與交易的第三人」產生了有利的影響（好處），且該行為人無法從受惠者身上獲得任何報酬時，就稱為外部經濟。
+    \begin{itemize}
+        \item 	(B) 外部不經濟 / (C) 外部成本： 這兩者是同義詞（即負的外部性），指的是個人的行為對第三人造成了未被補償的損害（壞處）。例如：工廠排放有毒廢水、鄰居半夜製造噪音、抽菸產生二手菸。
+        \item 閉鎖效果（Lock-in effect）：在財政學中，這個名詞通常用來描述課徵「資本利得稅」時產生的現象。投資人為了延遲繳納高額的稅款，會選擇長期持有已經獲利的股票或房地產而不願賣出，導致資本市場的資金流動性被「鎖死」。這與傳染病或打疫苗的情境完全無關。
+    \end{itemize}
+
+    \item 假設鐵工廠與洗衣店比鄰，鐵工廠生產對洗衣店生產造成污染，導致邊際損失 \(MD=2Q\)，鐵工廠生產的邊際效益 \(MB=300-Q\)，邊際私人成本 \(MPC=20+Q\)，其中 \(Q\) 為鐵工廠的年產量（萬噸）。鐵工廠的社會最適產量為何？
+    \begin{enumerate}[label=\Alph*.]
+        \item 70萬噸
+        \item 80萬噸
+        \item 140萬噸
+        \item 160萬噸。
+    \end{enumerate}
+    解答：因此鐵工廠私人的邊際效益（MB）即等於社會的邊際社會效益。
+    \[
+    MSB = MB = 300 - Q
+    \]
+    邊際社會成本不僅包含鐵工廠自行負擔的生產成本（邊際私人成本 MPC），還必須加上其生產過程中轉嫁給社會（洗衣店）的污染代價（邊際外部成本 MEC，在此題中即為邊際損失 MD）。
+    \[
+    MSC = MPC + MD
+    \]
+    將題目的方程式代入：
+    \[
+    MSC = (20 + Q) + 2Q
+    \]
+    \[
+    MSC = 20 + 3Q
+    \]
+    令邊際社會效益等於邊際社會成本以求解：
+    \[
+    MSB = MSC
+    \]
+    \[
+    300 - Q = 20 + 3Q
+    \]
+    將含 \(Q\) 的項移至等號同一邊：
+    \[
+    300 - 20 = 3Q + Q
+    \]
+    \[
+    280 = 4Q
+    \]
+    解得：
+    \[
+    Q^* = 70
+    \]
+
+    \item 在不擁擠的前提下，俱樂部財符合下列那些特性？
+    \begin{enumerate}[label=\Alph*.]
+        \item 敵對性與排他性
+        \item 非敵對性與排他性
+        \item 敵對性與非排他性
+        \item 非敵對性與非排他性。
+    \end{enumerate}
+    解答：
+    由布坎南（J. M. Buchanan）提出俱樂部財理論，俱樂部財（Club Goods，又稱「可排他的公共財」或「準公共財」）的特性如下：
+    \begin{itemize}
+        \item 排他性：俱樂部通常會有門檻或收費機制（如會員費、門票、密碼）。只有付費的人才能進入或使用服務，不付費的人可以被輕易排除在外。例如：收費的高速公路、健身房、有線電視頻道、Netflix。
+        \item 非敵對性（在不擁擠的前提下）：當俱樂部財的使用人數尚未達到其容量上限（即「不擁擠」）時，多增加一個人進來消費，並不會減少其他會員享受該設施的數量或品質。增加一名使用者的社會邊際成本為零。例如：在一個空曠的收費游泳池裡，多一個人進來游泳，並不會影響原本在裡面的人的游泳體驗。
+    \end{itemize}
+
+    \item 「坐享其成」（free riding）的問題，最常發生於下列何種情況？
+    \begin{enumerate}[label=\Alph*.]
+        \item 當財貨在消費上不具敵對性時
+        \item 當財貨在消費上具敵對性時
+        \item 當財貨的消費不具排他機制時
+        \item 當財貨的消費具排他機制時。
+    \end{enumerate}
+    解答：
+    \begin{itemize}
+        \item 非敵對性：公共財具集體消費，可同時提供給兩個以上的人共享利益。增加一個人的消費，不致於減少他人的消費，有消費的人均消費相同的數量，即消費的邊際成本為零或消費的邊際社會成本等於零。
+        \item 非排他性：要阻止任何人消費公共財，不是非常昂貴就是不可能。所以，公共財的提供會產生外部利益，消費者即使不願意支付代價也能享受利益，變成搭便車者（free riding）。
+    \end{itemize}
+
+    \item 假設公共財的邊際成本為1，在林達爾均衡下，下列何者必須等於林達爾租稅價格？
+    \begin{enumerate}[label=\Alph*.]
+        \item 公共財的邊際產量
+        \item 公共財的邊際利潤
+        \item 公共財的邊際外部成本
+        \item 人民對公共財的邊際願付價格。
+    \end{enumerate}
+    解答：手寫
+
+    \item A與B兩人受益於一純粹公共財，且兩人的需求曲線分別是：\(P_A=150-Q_A\)，\(P_B=200-2Q_B\)，其中 \(Q\) 是公共財數量。在林達爾（E. Lindahl）均衡時，下列敘述何者正確？
+    \begin{enumerate}[label=\Alph*.]
+        \item 當公共財提供的邊際成本為25時，公共財最適提供量為125
+        \item 當公共財提供的邊際成本為110時，公共財最適提供量為90
+        \item 當公共財最適提供量為100單位時，A與B兩人各分擔50元
+        \item 當公共財最適提供量為50單位時，A與B兩人各分擔100元。
+    \end{enumerate}
+    解答：
+    同16
+
+    \item 下列何種機制或政策可以誘導消費者顯示其對公共財之真實偏好？
+    \begin{enumerate}[label=\Alph*.]
+        \item 克拉奇租稅
+        \item 皮古稅
+        \item 定額稅
+        \item 支出稅。
+    \end{enumerate}
+    解答：
+    \vspace{2cm}
+
+    \item 下列那些財貨具有消費的非排他性？ (1)公共財（public goods） (2)私有財（private goods） (3)共有資源（common resources）
+    \begin{enumerate}[label=\Alph*.]
+        \item (1)(2)(3)
+        \item 僅(1)(3)
+        \item 僅(2)(3)
+        \item 僅(1)
+    \end{enumerate}
+    解答：略
+
+    \item 關於教育財貨的敘述，下列何者正確？
+    \begin{enumerate}[label=\Alph*.]
+        \item 教育是純公共財
+        \item 義務教育具備外部利益
+        \item 高等教育應該由政府免費提供
+        \item 發放教育券會降低學校間之競爭。
+    \end{enumerate}
+    解答：略
+
+    \item 政府提供公費疫苗，是因為疫苗注射為下列何種財貨？
+    \begin{enumerate}[label=\Alph*.]
+        \item 俱樂部財
+        \item 殊價財
+        \item 擁擠性財貨
+        \item 地方公共財。
+    \end{enumerate}
+    解答：
+    疫苗注射的經濟特性：
+    \begin{enumerate}
+        \item 私有財本質：疫苗本身是「純私有財」。它具備排他性（沒付錢或不符合資格就不給你打）與敵對性（你打了一劑，別人就少一劑）。
+        \item 正外部性（外部經濟）：如同前面幾題討論過的，一個人打了疫苗，除了保護自己，也產生了「減少傳染給他人機率」的巨大社會效益。
+        \item 資訊不對稱與短視近利：很多民眾可能因為怕痛、嫌麻煩，或者低估了得病的風險，導致即使有正外部性，大家自願去打疫苗的意願還是很低。
+    \end{enumerate}
+	(A) 俱樂部財（Club Goods）： 具有排他性但（在不擁擠時）無敵對性。例如：收費的高速公路、有線電視。疫苗有強烈的敵對性，不屬於此類。\\
+    (C) 擁擠性財貨（Congestible Goods）： 通常指介於公共財與私有財之間，當使用人數超過一定限度後會產生擁擠成本的財貨。例如：免費的市區道路、公園。疫苗的重點在於「正外部性」，而非「擁擠效應」\\
+    (D) 地方公共財（Local Public Goods）： 利益僅侷限於特定地理區域的公共財（如：社區公園、地方治安）。疫苗防疫是全國性甚至全球性的議題，且疫苗本身不是非敵對性的公共財。
+
+    \item 下列何者為林達爾模型（Lindahl model）下公共財的提供條件？
+    \begin{enumerate}[label=\Alph*.]
+        \item 每位投票者的邊際願意支付代價的加總，等於公共財的邊際成本
+        \item 每位投票者的邊際願意支付代價，等於公共財的邊際成本
+        \item 每位投票者的邊際願意支付代價，等於公共財的平均成本
+        \item 每位投票者的邊際願意支付代價的加總，等於公共財的平均成本。
+    \end{enumerate}
+    解答：同16
+
+    \item 有關殊價財的敘述，下列何者錯誤？
+    \begin{enumerate}[label=\Alph*.]
+        \item 可能違反消費者主權
+        \item 可滿足社會的殊價慾望
+        \item 不具排他性與敵對性
+        \item 例如義務教育。
+    \end{enumerate}
+    解答：殊價財的概念是由財政學者馬斯格雷夫（R. Musgrave）所提出。指的是：政府基於家長式管理主義（Paternalism），認為某些財貨或勞務對人民有益，但如果完全交由自由市場運作，人民的消費量會「低於」社會最適數量的財貨。
+    \begin{itemize}
+        \item (A) 正確：因為政府認為「我知道什麼對你最好」，所以會透過補貼、強制規定（如強制戴安全帽、強制國民義務教育）來強迫或誘導民眾消費。這種做法干預了個人依據自身偏好自由選擇的權利，因此違反了「消費者主權（Consumer Sovereignty）」的原則。
+        \item (B) 正確：殊價財的提供是為了解決市場失靈（通常是因為資訊不對稱或短視近利），以滿足社會整體認為具有「特殊價值（殊價）」的慾望。
+        \item (C) 錯誤：「不具排他性與非敵對性」是純粹公共財的特徵（如國防、路燈）。 殊價財在性質上通常屬於「私有財」（具備敵對性與排他性，例如：一個學生佔用了一個名額，別人就少一個名額；沒繳學費可以不讓你念）。政府之所以介入提供，是因為它會產生「正的外部性」或基於公平考量，而不是因為它具有公共財的特性。
+        \item (D) 正確：國民義務教育是最經典的殊價財例子。政府認為受教育對國民未來發展與國家整體素質有益，但許多父母可能短視近利不願花錢讓小孩上學，因此政府實施「義務」教育，強制且免費（或低價）提供。其他例子還有：疫苗接種、藝文活動補貼、安全帽等。
+    \end{itemize}
+
+    \item 某財貨之消費不具敵對性，多讓一個人消費該財貨，社會所需增加的邊際成本為：
+    \begin{enumerate}[label=\Alph*.]
+        \item 正數
+        \item 負數
+        \item 零
+        \item 可能為正數亦可能為負數。
+    \end{enumerate}
+    解答：非敵對性多增加一個人進來消費，並不會減少其他社會民眾享受該設施的數量或品質，增加一名使用者的社會邊際成本為零。
+
+    \item 下列何者為公共財之最適數量提供條件？其中MRS表示邊際替代率，而MRT為邊際轉換率：
+    \begin{enumerate}[label=\Alph*.]
+        \item \(MRS-MRT=0\)
+        \item \(\sum MRT-MRS=1\)
+        \item \(\sum MRS-MRT=0\)
+        \item \(MRS+MRT=1\)。
+    \end{enumerate}
+    解答：
+    \begin{itemize}
+        \item 私有財的最適條件： 因為私有財具有排他性與敵對性，每個人消費的數量可以不同，但面對的市場價格相同。因此，其達到柏瑞圖最適的條件是每個人的邊際替代率（主觀價值）都等於生產該財貨的邊際轉換率（客觀成本）：
+        \[
+        MRS^A = MRS^B = \dots = MRT
+        \]
+        \item 公共財的最適條件：因為純粹公共財具有「非敵對性（Non-rivalry）」，一旦提供出來，所有人都可以「同時且等量」地消費它（\(G = G^A = G^B\)）。因此，增加一單位公共財所帶來的「社會總邊際利益」，應該是所有消費者對這新增一單位公共財所願意支付的邊際利益（邊際替代率，MRS）之「加總」。而為了達到社會資源配置的最適境界（柏瑞圖最適），這個「社會總邊際利益」必須等於生產該公共財的「社會總邊際成本」（邊際轉換率，MRT）。因此，薩繆爾森法則的數學式為：
+        \[
+        \sum_{i=1}^{n} MRS^i = MRT
+        \]
+    \end{itemize}
+
+\end{enumerate}
+
+
+
+
+\end{document}
