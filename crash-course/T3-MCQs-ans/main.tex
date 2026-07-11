@@ -1,0 +1,480 @@
+\documentclass[12pt, a4paper]{article}
+
+%%------------------Preamble------------------%%
+
+    %% 引入Package %%
+\usepackage[margin=2cm]{geometry} % 上下左右距離邊緣3cm
+\usepackage{fancyhdr}   % 頁首頁尾 fancy header
+\usepackage{titling}    % 設定 title,author,date
+\usepackage{mathtools,amsthm,amssymb} % 引入 AMS 數學環境
+\usepackage[shortlabels,inline]{enumitem} %加強 enumerate, itemize 功能
+\usepackage{setspace}
+\usepackage{tcolorbox}
+\usepackage{xcolor} % 用於表格上色
+\usepackage{graphicx}      % 用於縮放表格寬度
+\usepackage{array}
+\usepackage{float} % for [H] float placement
+\tcbuselibrary{breakable}
+\usepackage{tabularx}
+\usepackage{colortbl}
+
+    %% 中文環境，僅限使用 XeLaTeX 編譯器 %%
+\usepackage[CJKmath=true,AutoFakeBold=3,AutoFakeSlant=.2]{xeCJK}
+
+\setCJKmainfont{Noto Serif CJK TC}
+\setCJKsansfont{Noto Sans CJK TC}
+\setCJKmonofont{Noto Sans Mono CJK TC}
+
+\newCJKfontfamily\Kai{Noto Serif CJK TC}
+\newCJKfontfamily\Hei{Noto Sans CJK TC}
+\newCJKfontfamily\NewMing{Noto Serif CJK TC}
+
+\XeTeXlinebreaklocale "zh"
+
+
+
+
+\begin{document}
+
+\title{T3 選擇題解答} % 設定標題
+\author{李原廷} % 設定作者
+\date{\today} % 設定完成日期，也可以使用 \date{\today}
+
+\maketitle
+
+\begin{enumerate}
+
+    \item 整個社會對公共財的需求線為何？
+    \begin{enumerate}[label=\Alph*.]
+        \item 既定價格下，每人需求數量水平加總
+        \item 既定價格下，每人需求數量垂直加總
+        \item 既定數量下，每人願付價值水平加總
+        \item 既定數量下，每人願付價值垂直加總
+    \end{enumerate}
+    解答：
+    公共財的總需求曲線（垂直加總）：公共財具有「非敵對性」，一旦提供出來，所有人都可以同時享用完全相同數量的財貨（例如國防、路燈），也就是 \(Q_{總} = Q_A = Q_B\)。因為每個人享受到的數量都一樣，所以社會對這個特定數量公共財的總體評價（總邊際利益），應該是把每個人為了這個數量所願意支付的代價（願付價格）加總起來。
+
+    \item 在 A、B 兩人的社會，其對甲財貨的需求價格與數量分別為 \(P_A\)、\(P_B\)、\(Q_A\)、\(Q_B\)，而市場均衡價格與數量為 \(P_Z\)、\(Q_Z\)，則下列均衡條件的敘述，何者正確？
+    \begin{enumerate}[label=\Alph*.]
+        \item 若甲財貨為純私有財，則 \(P_A=P_B=P_Z\)、\(Q_A+Q_B=Q_Z\)
+        \item 若甲財貨為純私有財，則 \(P_A+P_B=P_Z\)、\(Q_A+Q_B=Q_Z\)
+        \item 若甲財貨為純公共財，則 \(P_A+P_B=P_Z\)、\(Q_A+Q_B=Q_Z\)
+        \item 若甲財貨為純公共財，則 \(P_A=P_B=P_Z\)、\(Q_A=Q_B=Q_Z\)
+    \end{enumerate}
+    解答：
+    私有財具有「敵對性」，你多消費一單位財貨，別人就少消費ㄧ單位財貨。在自由市場中，每個人面對相同的市場價格，但根據各自的需求購買不同的「數量」。因此，要找出整個社會的總需求，我們是在「既定價格下，將每個人的需求數量進行水平加總」，如同選項（A）。\\
+    公共財如第一題所提到，「既定數量下，每人願付價值垂直加總」，所以$(Q_Z = Q_A = Q_B, P_A + P_B = P_Z$。
+
+    \item 有關共享資源（common resources）的敘述，下列何者錯誤？
+    \begin{enumerate}[label=\Alph*.]
+        \item 非敵對性是共享資源造成市場失靈的主因
+        \item 共享資源的問題起因於財產權未明確界定
+        \item 共享資源的總量會因過度使用而逐漸耗竭
+        \item 寇斯定理（Coase Theorem）的應用，可避免共享資源造成草原悲劇（the tragedy of common）
+    \end{enumerate}
+    解答：共享資源的特徵是：
+    \begin{itemize}
+        \item 不具排他性（Non-excludable）： 無法（或成本極高）阻止任何人去使用它（例如：公海裡的魚、開放的牧草地、乾淨的空氣）。
+        \item 具備敵對性（Rivalrous）： 一個人使用了該資源，就會減少其他人能使用的數量或品質（例如：你捕了一條魚，海裡就少一條魚供別人捕）。
+    \end{itemize}
+    \begin{enumerate}[label=\Alph*.]
+        \item 錯誤：導致共享資源市場失靈（即過度捕撈、過度放牧）的主因，正是因為它「具備敵對性」但卻「不具排他性」。
+        \item 正確：共享資源之所以會發生 Tragedy of the Commons，根本原因在於這片海、這塊草地「沒有主人（財產權未明確界定）」。大家都覺得「反正不是我的，我不抓別人也會抓」，於是瘋狂掠奪。
+        \item 正確：因為具備敵對性且缺乏排他機制，個人的私利驅使他們過度使用資源，最終導致總量耗竭，所有人都受害。
+        \item 正確：寇斯定理主張，只要將財產權明確界定給某一方（例如：把湖泊的產權劃給某個漁民或社區），且交易成本極低，那麼產權擁有者為了追求自身利益最大化，就會自發性地去管理、限制捕撈量，避免資源枯竭。
+    \end{enumerate}
+
+
+    \item 甲、乙兩人對一個純粹公共財的需求曲線分別為 \(Q=10-P\) 及 \(Q=8-P\)，其中 \(P\) 及 \(Q\) 分別為價格及數量，供給曲線為 \(Q=P\)，假設社會上對此純粹公共財的需求只有甲、乙兩人，請問社會最適數量為何？
+    \begin{enumerate}[label=\Alph*.]
+        \item 10
+        \item 8
+        \item 6
+        \item 4
+    \end{enumerate}
+    解答：
+    \begin{itemize}
+        \item 甲的需求曲線：\(Q = 10 - P_A \implies P_A = 10 - Q\)
+        \item 乙的需求曲線：\(Q = 8 - P_B \implies P_B = 8 - Q\)
+    \end{itemize}
+    公共財的社會總需求價格是將兩人的願付價格垂直相加（\(\sum P = P_A + P_B\)）：
+    \begin{itemize}
+        \item 當 \(0 \le Q \le 8\) 時（甲乙兩人都願意付錢）：\(P_{總} = P_A + P_B = (10 - Q) + (8 - Q) = 18 - 2Q\)
+        \item 當 \(8 < Q \le 10\) 時（只有甲願意付錢，乙不付了）：\(P_{總} = P_A + 0 = 10 - Q\)
+    \end{itemize}
+	題目的供給曲線為：\(Q = P \implies P_{供給} = Q\) （即邊際成本 \(MC = Q\)）
+    我們將供給曲線與第一段的總需求曲線相交：
+    \[
+    P_{總} = P_{供給}
+    \]
+    \[
+    18 - 2Q = Q
+    \]
+    \[
+    18 = 3Q
+    \]
+    \[
+    Q = 6
+    \]
+    類似題目：102.稅務三、105.高考
+
+    \item A、B、C 三位消費者要共同提供公共財，令 \(y\) 為公共財，\(x\) 為私有財，\(y\) 與 \(x\) 的市場皆為完全競爭。若在三人所共同決定出來的公共財數量下，A、B、C 三人對 \(y\) 和 \(x\) 之間邊際替代率（\(MRS_{y,x}\)）的絕對值分別為 1.3、0.8、3.2。進一步假設 \(y\) 的邊際成本為 7 元，\(x\) 的邊際成本為 1 元。下列敘述何者正確？
+    \begin{enumerate}[label=\Alph*.]
+        \item 公共財之提供為效率水準
+        \item 公共財的數量高於效率水準下的數量
+        \item 公共財的數量低於效率水準下的數量
+        \item A 應該分攤最多公共財的成本
+    \end{enumerate}
+    解答：
+    \begin{itemize}
+        \item 效率條件： 只有當 \(\sum MRS = MRT\) 時，公共財的提供才達到最適效率。
+        \item 現況分析：目前的狀態是 \(\sum MRS\ (5.3) < MRT\ (7)\)。
+        \item 經濟意涵：這表示社會對於「最後一單位公共財」的總願付價值（5.3），小於生產它的實際成本（7）。社會為了生產這個公共財，花費了過多的資源，導致淨福利受損。
+        \item 結論：既然「效益小於成本」，代表目前公共財生產得太多。目前共同決定出來的公共財數量，高於效率水準下的最適數量。必須減少公共財的數量（減少數量會使邊際利益 MRS 上升），直到兩者相等為止。
+    \end{itemize}
+    \begin{enumerate}[D.]
+        \item 根據「受益者付費」或林達爾均衡的原則，負擔的成本比例應與其邊際願付價格（MRS）成正比。因為 C 的 MRS 最高（3.2），所以應該是 C 分攤最多的成本，而非 A。
+    \end{enumerate}
+
+    \item 下列財政學理論的敘述，何者錯誤？
+    \begin{enumerate}[label=\Alph*.]
+        \item 俱樂部財（club goods）理論由林達爾（E. Lindahl）所提出
+        \item 殊價財（merit goods）不會發生坐享其成的現象
+        \item 克拉奇租稅（Clarke tax）可解決公共財的坐享其成問題
+        \item 公共財的林達爾均衡（Lindahl equilibrium）符合受益原則
+    \end{enumerate}
+    解答：俱樂部財由布坎南（J. M. Buchanan）提出。在最適消費人數內，消費具有非敵對性，卻具排他性。但隨消費人數增加超過最適人數以上時，所有使用者的利益會隨使用人數增加而減少，產生擁擠成本，具有部分敵對性。
+
+    \item 若一社會選民面對 \(x\)、\(y\)、\(z\) 三個不同議案的偏好排列順序，分別為：
+    \begin{enumerate}[label=\arabic*.]
+        \item \(x \succ z \succ y\) 有 36\% 的選民
+        \item \(y \succ x \succ z\) 有 33\% 的選民
+        \item \(z \succ y \succ x\) 有 31\% 的選民
+    \end{enumerate}
+    若採記點投票（Borda rule），每位投票者依個人偏好將議案排列順序，最高者給 3 點，依序遞減。最後勝出為那一個方案？若將 \(z\) 案移除，採記點投票勝出者為那一個方案？
+    \begin{enumerate}[label=\Alph*.]
+        \item \(x\)、\(y\)
+        \item \(y\)、\(x\)
+        \item \(x\)、\(x\)
+        \item \(y\)、\(y\)
+    \end{enumerate}
+    解答：
+    \begin{itemize}
+        \item 情境一：三個方案 \(x\)、\(y\)、\(z\) 皆存在時：
+        \begin{itemize}
+            \item 方案 \(x\) 的總點數：\(36 \times 3 + 33 \times 2 + 31 \times 1 = 205\)
+            \item 方案 \(y\) 的總點數：$36 \times 1 + 33 \times 3 + 31 \times 2 = 197 $
+            \item 方案 \(z\) 的總點數：$36 \times 2 + 33 \times 1 + 31 \times 3 = 198$
+            \item 結果：點數排序為 x (205) $\succ$ z (198) $\succ$ y (197)
+        \end{itemize}
+        \item 情境二：將方案 \(z\) 移除後：當方案 \(z\) 被移除後，選民只剩下對 \(x\) 和 \(y\) 的偏好排列。我們重新檢視這三群選民的新偏好順序：
+        \begin{enumerate}[1.]
+            \item 原 \(x \succ z \succ y\) \(\Rightarrow\) 移除 \(z\) 後變為：\(x \succ y\) （36\%）
+            \item 原 \(y \succ x \succ z\) \(\Rightarrow\) 移除 \(z\) 後變為：\(y \succ x\) （33\%）
+            \item 原 \(z \succ y \succ x\) \(\Rightarrow\) 移除 \(z\) 後變為：\(y \succ x\) （31\%）
+        \end{enumerate}
+        這時候只剩下兩個方案對決，其實就等同於簡單多數決。我們統計偏好人數：認為 \(x\) 比 \(y\) 好的選民（第一群）：36\%。認為 \(y\) 比 \(x\) 好的選民（第二群 + 第三群）：\(33\% + 31\% =\) 64\%。由於 64\% 的多數選民認為 \(y\) 優於 \(x\)，因此在移除 \(z\) 後，方案 \(y\) 勝出。
+    \end{itemize}
+
+    \item 關於公共選擇的相關理論，下列敘述何者錯誤？
+    \begin{enumerate}[label=\Alph*.]
+        \item 選票互助的結果可能提升社會福利
+        \item 尼斯坎南官僚模型的結果顯示政府預算規模偏低
+        \item 林達爾模型的結果可以達到最適公共財數量
+        \item 波文模型的結果可以達到最適公共財數量
+    \end{enumerate}
+    解答：
+    \begin{enumerate}[label=\Alph*.]
+        \item 正確：選票互助（Logrolling / Vote Trading）是指民代之間交換選票。
+            \begin{itemize}
+                \item 優點：它可以讓原本無法通過，但對某些群體利益極大（偏好強度高）的法案得以通過。如果這些互助法案帶來的總社會利益大於總成本，就能提升社會總福利。
+                \item 缺點：如果互助的是肉桶立法（Pork-barrel legislation），只圖利少數選區卻讓全國納稅人買單，則會降低社會福利。因此選項說「可能」提升社會福利是正確的敘述。
+            \end{itemize}
+        \item 錯誤：尼斯坎南（William Niskanen）的官僚模型（Bureaucratic Model）提出官僚追求的是預算極大化，而非效率或公共利益。
+        \item 正確：林達爾模型是一種模擬市場機制的理論。它假設每個人依據自己對公共財的邊際願付價格來分攤租稅（\(t_i = MB_i\)）。在這個理想的均衡下，所有人的願付價格加總剛好等於邊際成本（\(\sum MB = MC\)），完全符合薩繆爾森法則，因此理論上可以達到最適公共財數量（柏瑞圖最適）。
+        \item  正確：波文模型（Bowen Model）分析了在多數決制度下，公共財數量的決定。
+            \begin{itemize}
+                \item 該模型指出，多數決的結果會由中位數投票者的需求來決定。
+                \item 如果社會大眾對公共財的偏好（需求）呈現常態對稱分配，那麼中位數就會剛好等於平均數。此時，中位數選民決定的數量，就會完全等於社會總邊際利益等於總邊際成本的數量，也就是可以達到社會最適公共財數量。
+            \end{itemize}
+    \end{enumerate}
+
+    \item 根據布坎南（J. Buchanan）與杜洛克（G. Tullock）的最適憲政模型（the optimal constitution model），假設決策成本函數為 \(X=10N+N^2\)，而外部成本函數為 \(Y=2500-50N\)，若總投票人數為 50 人，\(N\) 為贊成人數，最適票決通過的人數為多少人？
+    \begin{enumerate}[label=\Alph*.]
+        \item 10
+        \item 15
+        \item 20
+        \item 25
+    \end{enumerate}
+    解答：布坎南（J. Buchanan）與杜洛克（G. Tullock）共同提出的「最適憲政模型（Optimal Constitution Model）」，或稱「最適票決法則（Optimal Voting Rule）」。該模型認為，社會在決定一項議案的通過門檻（需要多少人贊成）時，必須考量兩種成本的取捨（Trade-off）：
+    \begin{itemize}
+        \item 決策成本（Decision Cost, \(X\)）： 為了說服更多人投贊成票，所需要耗費的遊說、協商與妥協的時間和精力。這個成本會隨著通過門檻（贊成人數 \(N\)）的提高而遞增。
+        \item 外部成本（External Cost, \(Y\)）： 議案通過後，可能對投反對票的少數人造成的損害。這個成本會隨著通過門檻的提高（代表反對的人變少）而遞減。
+    \end{itemize}
+    社會總成本等於決策成本加上外部成本：
+    \[
+    TC = X + Y
+    \]
+    將題目的函數代入：
+    \[
+    TC = (10N + N^2) + (2500 - 50N)
+    \]
+    整理合併同類項：
+    \[
+    TC = N^2 - 40N + 2500
+    \]
+    為了找到使 \(TC\) 最小的 \(N\)，我們將總成本函數對 \(N\) 進行一階微分，並令其等於零（求極值）：
+    \[
+    \frac{d(TC)}{dN} = 2N - 40 = 0
+    \]
+    解方程式：
+    \[
+    2N = 40
+    \]
+    \[
+    \mathbf{N = 20}
+    \]
+    根據最適憲政模型，當贊成人數設定為 20 人時，社會為該議案付出的總成本（決策成本與外部成本之和）會降到最低，這也就是社會最適的票決通過門檻。
+
+    \item 下列何者是現代社會很少採用林達爾（E. Lindahl）投票模式議決資源分配的主要原因？
+    \begin{enumerate}[label=\Alph*.]
+        \item 林達爾均衡並非社會資源配置最適
+        \item 林達爾價格會造成市場扭曲
+        \item 達到林達爾均衡的交易成本太高
+        \item 林達爾均衡只適用於兩人投票議決的情境
+    \end{enumerate}
+    解答：
+    C.：正確。這是林達爾模型在現實中幾乎無法運作的問題：
+    \begin{itemize}
+        \item 偏好隱藏（搭便車問題）：要實施林達爾定價，政府必須知道每一位對該公共財的真實需求曲線（願付價格）。但因為公共財具有非排他性，每個人都有誘因去說謊，假裝自己不需要，以逃避繳稅。
+        \item 龐大的資訊蒐集成本：即使大家願意說實話，政府要逐一去調查、計算出每一個人的邊際利益，然後再為每個人量身訂做一個專屬的「林達爾稅率」，這所耗費的行政成本、時間成本（交易成本）將會遠遠大於提供該公共財所帶來的效益。
+    \end{itemize}
+
+    \newpage
+
+    \item 假設選民所得的分配與其對公共議案偏好的分配一致且皆為單峰分配。在波文模型（Bowen model）中，當所得分配為右偏（skewed to the right）分配時，則採兩兩議案簡單多數決投票所決定的公共支出水準 \(Q^*\)，與社會最適水準 \(Q^{**}\) 間的關係為何？
+    \begin{enumerate}[label=\Alph*.]
+        \item \(Q^* < Q^{**}\)
+        \item \(Q^* = Q^{**}\)
+        \item \(Q^* > Q^{**}\)
+        \item \(Q^* / N = Q^{**}\)，\(N\) 為投票人數
+    \end{enumerate}
+    解答：
+    \begin{enumerate}[label=\textbf{\arabic*.}]
+    \item 理解兩個「數量」的決定基準：
+    \begin{itemize}
+        \item \textbf{\(Q^*\)（投票決定的數量）：} 根據中位數選民定理，在簡單多數決且偏好為單峰的條件下，投票結果必定會是\textbf{中位數選民}所偏好的公共支出水準。
+        \item \textbf{\(Q^{**}\)（社會最適水準）：} 根據福利經濟學（\(\sum MB = MC\)），社會的最適提供量取決於社會總願付價格，這實質上對應於全體選民的平均偏好，也就是\textbf{平均數選民（Mean Voter）}的偏好水準。
+    \end{itemize}
+
+    \item 分析「右偏分配（Skewed to the right）」的統計特性：
+    \begin{itemize}
+        \item 右偏分配的圖形特徵是：資料大部分集中在左邊（低數值區），但右邊有一條很長的尾巴（少數極端高數值拉高了整體平均）。
+        \item 在這種分配下，少數極端的富豪會大幅拉高平均數，但對中位數影響不大。因此統計學上的必然結果為：\textbf{中位數 (Median) \(<\) 平均數 (Mean)}。
+    \end{itemize}
+
+    \item 結論：
+    \begin{itemize}
+        \item 題目假設「選民所得的分配與其對公共議案偏好的分配一致」。
+        \item 既然所得是右偏分配，那麼民眾對公共財的偏好也是右偏分配。
+        \item 因此，中位數選民的偏好必然\textbf{小於（\(<\)）}平均數選民的偏好。
+        \item 對應到公共財數量，即為多數決決定的數量\textbf{低於}社會整體考量下的最適公共財數量，故結論為 \textbf{\(Q^* < Q^{**}\)}。
+    \end{itemize}
+\end{enumerate}
+
+    \item 下列有關簡單多數決投票法則之敘述，何者錯誤？
+    \begin{enumerate}[label=\Alph*.]
+        \item 布萊克（Black）證明當所有人偏好都是單峰偏好的話，中位數投票者的偏好支配了多數決表決的結果
+        \item 當多數決投票產生循環（Cycling）時，有可能利用議程操縱（agenda manipulation），來確保產生有利的結果
+        \item 當多數決投票產生循環（Cycling）時，選票互助也是解開此僵局的可行方法之一
+        \item 布萊克（Black）的模型證明單峰偏好是多數決得到社會選擇均衡的必要條件
+    \end{enumerate}
+    解答：
+    \begin{itemize}
+        \item A.：中位數選民定理（Median Voter Theorem）。布萊克（Duncan Black）證明，只要所有投票者的偏好都是單峰偏好，在簡單多數決且兩兩對決的規則下，必然會產生一個穩定且唯一的均衡結果，而這個結果剛好就是「中位數投票者」最偏好的議案。
+        \item D.：錯誤：布萊克證明的「單峰偏好」，是多數決得到社會選擇均衡的「充分條件（Sufficient condition）」，而不是「必要條件（Necessary condition）」。
+        \begin{itemize}
+            \item 充分條件的意思是：只要大家都是單峰偏好，就一定能得到均衡（不會產生循環）。
+            \item 不是必要條件的原因：就算社會中存在某些人是「多峰偏好（或雙峰偏好）」，只要這些多峰偏好的人數不夠多，或者他們的偏好排列剛好沒有形成互剋的迴圈，多數決依然有可能得出穩定唯一的均衡結果。因此，達成均衡「不必然（非必要）」要求所有人都是單峰偏好。
+        \end{itemize}
+    \end{itemize}
+
+    \item 中位數投票理論是將雅羅的不可能定理（Arrow's impossibility theorem）轉成可能，主要是因其違反該定理的那一個條件？
+    \begin{enumerate}[label=\Alph*.]
+        \item 定義域範圍無任何限制（unrestricted domain）
+        \item 偏好函數需具有遞移性（transitivity）
+        \item 投票規則不設限
+        \item 社會偏好非由獨裁者所決定（non-dictatorship）
+    \end{enumerate}
+    解答：
+    亞羅不可能定理（Arrow's Impossibility Theorem）：亞羅證明了，在滿足基本且合理的前提條件下，不可能存在一種完美的投票機制，能將個人的偏好加總成完全理性且沒有矛盾的社會偏好（即必定會出現循環多數決或獨裁者）。前提其中之一就是：
+    定義域無限制（Unrestricted domain / Universal admissibility）：意思是投票機制必須能夠處理選民的「任何形式」偏好排列（包含雙峰、多峰、各種千奇百怪的偏好順序），都不能出現矛盾。\\
+    中位數投票理論（布萊克 Black 的單峰偏好定理）：中位數選民定理之所以能打破亞羅不可能定理，成功得出一個穩定、唯一且沒有循環矛盾的社會均衡結果，在於它加上了一個強烈的假設條件：所有選民的偏好都必須是「單峰偏好（Single-peaked preferences）」，就等於排除了那些會造成投票矛盾的「多峰偏好（Multi-peaked preferences）」。
+
+    \item 甲、乙、丙三人對教育支出高、中、低三種水準進行投票，其偏好排序分別如下：\(低 \succ 中 \succ 高\)、\(中 \succ 高 \succ 低\)、\(高 \succ 低 \succ 中\)。假設投票只進行兩輪，當投票者甲有權安排議案表決的順序時，甲應該會如何安排議程？
+    \begin{enumerate}[label=\Alph*.]
+        \item 先安排高支出議案與低支出議案進行第一輪投票，勝出者再與中支出議案進行第二輪投票
+        \item 先安排高支出議案與中支出議案進行第一輪投票，勝出者再與低支出議案進行第二輪投票
+        \item 先安排中支出議案與低支出議案進行第一輪投票，勝出者再與高支出議案進行第二輪投票
+        \item 不論如何安排議程，勝出者均為中支出議案
+    \end{enumerate}
+    解答：
+    略。（手寫）
+
+    \item 下列關於雅羅（K. Arrow）不可能定理的敘述，何者錯誤？
+    \begin{enumerate}[label=\Alph*.]
+        \item 雅羅不可能定理告訴我們，世上找不到一套機制加總社會不同成員的不同偏好而保證不發生投票矛盾的情形
+        \item 雅羅不可能定理是在社會成員真實偏好已知下，不可能由個人偏好形成社會偏好的問題
+        \item 雅羅不可能定理是討論不可能獲取社會成員真實偏好的問題
+        \item 雅羅不可能定理的結論顯示：排除個人效用可比較性，從個人偏好推導出社會偏好的唯一方法就是實行獨裁統治
+    \end{enumerate}
+    解答：略
+
+    \item 史蒂格勒（G. Stigler）利用恩格爾法則（Engel's Law）說明公共支出成長趨勢，認為：
+    \begin{enumerate}[label=\Alph*.]
+        \item 公共財符合劣等財的定義
+        \item 公共財符合奢侈品的定義
+        \item 公共財符合季芬財（Giffen goods）的定義
+        \item 公共財符合必需品的定義
+    \end{enumerate}
+    解答：瓦格納法則（Wagner's Law，政府支出不斷成長法則）：隨著經濟發展、國民所得增加，政府支出的成長率會大於國民所得的成長率。
+    \begin{itemize}
+        \item 經濟學意涵：也就是公共財（如教育、福利、基礎建設）的「所得彈性大於 1 （\(E_y > 1\)）」。
+        \item 分類：在此理論下，公共財符合奢侈品的定義。
+    \end{itemize}
+
+    \item 下列何者是鮑莫（W. Baumol）不平衡成長模型正確的基本假設？
+    \begin{enumerate}[label=\Alph*.]
+        \item 公部門的生產效率會較私部門為高
+        \item 公部門的資本投入會較私部門為高
+        \item 勞動投入在公私部門之間可以自由移動
+        \item 民眾對私部門產出的價格需求彈性小於 1
+    \end{enumerate}
+    解答：
+    \begin{enumerate}[label=\Alph*.]
+        \item 錯誤。 鮑莫模型將整體經濟分為兩個部門：
+        \begin{itemize}
+            \item 進步部門（Progressive sector）：通常指私部門（如製造業）。因為容易引進新技術和資本設備，勞動生產力（效率）會持續、快速地提升。
+            \item 停滯部門（Non-progressive sector）：通常指公部門。這些工作本質上高度依賴人力，很難用機器取代。因此，勞動生產力提升非常緩慢，甚至停滯。
+            \item 結論：公部門的生產效率通常低於私部門。
+        \end{itemize}
+        \item 錯誤。承上所述，私部門（進步部門）之所以效率高，正是因為容易大量投入資本設備（如自動化生產線）；而公部門（停滯部門）主要是勞力密集產業。因此，通常是私部門的資本投入較高。
+        \item 正確。勞動市場是完全競爭的，勞工可以在公、私部門之間自由移動。
+        \begin{itemize}
+            \item 因為私部門生產力提高，老闆幫私部門員工加薪。但因為勞工可以自由移動，公部門如果想留住人才，就必須跟著私部門一起加薪，否則人才都會跑去私部門。
+            \item 結果（鮑莫病）：公部門的員工生產力沒有提高，但薪水卻跟著私部門的幅度一直漲。這導致公部門提供服務的「單位成本」不斷暴增，這就是政府支出不斷膨脹的原因。
+        \end{itemize}
+        \item 錯誤。鮑莫模型探討政府支出膨脹時，通常會假設民眾對公部門（而非私部門）產出的「價格需求彈性缺乏彈性（小於1）」。也就是說，即便公部門服務（如教育、醫療）的成本和價格不斷攀升，民眾因為覺得這些是必需品，依然會買單，不會大幅減少消費量。這才導致政府的總支出金額越來越大。
+    \end{enumerate}
+
+    \item 根據中位數投票者理論，當一個國家的所得分配呈現何種分配時，則因民眾會要求政府擴大所得重分配政策，進而造成公共支出的增加？
+    \begin{enumerate}[label=\Alph*.]
+        \item 常態分配
+        \item 左偏分配
+        \item 右偏分配
+        \item 雙峰分配
+    \end{enumerate}
+    解答：
+    \begin{itemize}
+        \item 右偏分配（正偏態，Skewed to the right）：現實社會中最常見的所得分配型態。特徵是多數人落在中低所得區間，但有極少數的超級富豪將整體的平均所得大幅向上拉高。
+        \item 數學上：中位數 < 平均數。
+        \item 投票結果（中位數選民的決策）：在簡單多數決下，政策由中位數選民決定。因為他的所得「低於」社會平均，如果政府採取統一稅率向所有人收稅，然後將這筆龐大稅收平分給所有人（重分配），中位數選民拿回來的福利，會遠大於他繳出去的稅金。
+        \item 結論：基於追求自身利益極大化，中位數選民會支持並要求政府擴大實施所得重分配政策，進而導致整體的公共支出與政府規模不斷擴張。
+    \end{itemize}
+
+    \item 皮寇克（A. T. Peacock）和魏斯曼（J. Wiseman）用以說明政府支出成長的各項效果，包括下列那些效果？1.示範效果（demonstration effect） 2.位移效果（displacement effect） 3.制輪效果（ratchet effect） 4.集中效果（concentration effect） 5.波及效果（spread effect） 6.檢查效果（inspection effect）
+    \begin{enumerate}[label=\Alph*.]
+        \item 1.,3.,5.
+        \item 2.,4.,6.
+        \item 1.,3.,4.,5.
+        \item 2.,3.,4.,6.
+    \end{enumerate}
+    解答：略
+
+    \item 有關公共支出成長理論中的制輪效果（ratchet effect），下列敘述何者正確？
+    \begin{enumerate}[label=\Alph*.]
+        \item 當經濟繁榮時，公共支出不升反降，但當經濟衰退時，公共支出不降反升
+        \item 當經濟繁榮時，公共支出不降反升，但當經濟衰退時，公共支出不升反降
+        \item 當經濟繁榮時，公共支出增加，但當經濟衰退時，公共支出並未等幅下降
+        \item 當經濟繁榮時，公共支出增加，但當經濟衰退時，公共支出並未等幅上升
+    \end{enumerate}
+    解答：
+    政府支出與私人消費一樣，存在「由儉入奢易，由奢入儉難」的習性，因而「上升容易，下跌難」呈現偏高規模的支出水準的現象。
+
+    \item 假設社會祇有甲、乙、丙三位成員，要分別投票議決 A、B 兩項公共投資計畫。甲、乙、丙三人在 A、B 兩項計畫通過時的淨福利變化為：甲 \((100, -50)\)，乙 \((-60, 110)\)，丙 \((-30, -80)\)。以簡單多數決進行投票的結果是兩案都獲得通過。下列那一項可以解釋這種投票結果？
+    \begin{enumerate}[label=\Alph*.]
+        \item 甲、乙進行投票交易
+        \item 甲、乙、丙三人均以追求全體社會福利最大為目標
+        \item 甲為一特殊利益團體
+        \item 乙為一壓力團體
+    \end{enumerate}
+    解答：手寫。
+    \begin{itemize}
+        \item B.：個人皆以追求個人淨利益極大為目標
+        \item C./D.：甲、乙兩人因選選票互助而結盟，所以形成利益團體；而丙為利益團體運作下的利益犧牲者。
+    \end{itemize}
+
+    \item 所謂「競租」行為是指：
+    \begin{enumerate}[label=\Alph*.]
+        \item 經濟個體為獲取競爭市場的「經濟租」，利用政府的法律或管制，所採取的「非生產性交易行為」
+        \item 經濟個體為獲取獨占或寡占的「經濟租」，利用政府的法律或管制，所採取的「非消費性交易行為」
+        \item 經濟個體為獲取競爭市場的「經濟租」，利用政府的法律或管制，所採取的「非消費性交易行為」
+        \item 經濟個體為獲取獨占或寡占的「經濟租」，利用政府的法律或管制，所採取的「非生產性交易行為」
+    \end{enumerate}
+    解答：
+    \begin{itemize}
+        \item 完全競爭市場中，廠商的長期經濟利潤為零，沒有多餘的利潤可以賺取。因此，競租的目標是為了取得由政府人為創造的「獨占或寡占特權」（例如：特許執照、進口配額、關稅保護），藉此賺取龐大的超額利潤，這部分利潤被稱為「經濟租」。
+        \item 為了得到這些政府特權，利益團體會花費大量的金錢與資源去進行遊說、關說甚至賄賂。這些花費雖然對個別廠商有利，但對整個社會而言，並沒有創造出任何實質的新財貨或勞務，純粹只是財富的重分配。因此，經濟學上將這種消耗社會資源卻無助於生產的行為，定義為「非生產性行為」。
+    \end{itemize}
+
+    \item 亞羅（Arrow）不可能性定理與布拉克（Black）中位數投票者定理是公共選擇理論重要的研究成果。請問下列何者正確：
+    \begin{enumerate}[label=\Alph*.]
+        \item 亞羅不可能性定理的成立前提之一，是要求所有投票者的偏好必須為「單峰偏好」（Single-peaked preferences）。
+        \item 布拉克的中位數投票者定理保證，即使在多維度（Multi-dimensional）的公共議題上，多數決也必定能產生穩定且唯一的均衡結果。
+        \item 中位數投票者定理與亞羅不可能性定理並未牴觸，因為前者限定了選民必須具備單峰偏好，實際上是打破了亞羅定理中定義域範圍無任何限制（Unrestricted domain）之前提。
+        \item 依據包文模型，當投票者對公共財的偏好呈現常態對稱分配時，由中位數投票者所決定的公共財數量，必定會大於社會柏瑞圖最適（Pareto optimal）的數量。
+    \end{enumerate}
+    解答：
+    \begin{enumerate}[label=\Alph*.]
+        \item 錯誤。亞羅不可能定理的前提之一是「無限制的主域」，意思是投票機制必須能包容、處理選民的「任何一種」偏好排序（無論是單峰、雙峰還是多峰），而不能加以限制。
+        \item 錯誤。布拉克的「中位數投票者定理」要能產生穩定且唯一的均衡（避免投票循環），有兩個假設：第一，所有人都是單峰偏好；第二，議題必須是「單一維度（One-dimensional）」（例如：預算金額的高低）。如果議題是多維度（例如：同時要決定預算多寡，又要決定錢花在國防還是教育），即使大家都是單峰偏好，多數決依然很可能陷入投票矛盾的循環。
+        \item 正確。亞羅證明了在「無限制主域」等條件下，不可能有完美的社會決策。而中位數投票者定理之所以能得出穩定結果，是因為加上了「所有人必須是單峰偏好」這個限制，放寬了亞羅不可能定理中「定義域無限制」的前提，兩者在邏輯上自然就沒有牴觸。
+        \item 錯誤。根據包文（Bowen）模型，社會最適數量由「平均數選民（Mean voter）」的需求決定，而簡單多數決的數量由「中位數選民（Median voter）」決定。當選民偏好呈現常態對稱分配時，平均數等於中位數。因此，中位數選民所決定的數量會等於社會柏瑞圖最適的數量，而非大於。
+    \end{enumerate}
+
+    \item 在決定公共財數量的過程中，經濟學常探討「多數票決（Majority voting）」與「林達爾均衡（Wicksell-Lindahl equilibrium）」兩種機制。關於這兩種機制的比較，下列敘述何者正確？
+    \begin{enumerate}[label=\Alph*.]
+        \item 林達爾均衡因為依據每個人的邊際利益來分攤租稅，在現實中能完全克服搭便車問題，有效引導民眾誠實揭露真實偏好。
+        \item 多數票決在任何情況下皆能產生穩定唯一的均衡結果，其決定的公共財數量符合社會的柏瑞圖效率。
+        \item 林達爾均衡在理論上符合柏瑞圖效率，但實務上會面臨隱藏偏好的誘因；多數票決則可能產生「投票矛盾」而缺乏穩定均衡。
+        \item 魏克賽爾（Wicksell）主張的絕對無異議票決（Unanimity rule）雖然能達到柏瑞圖改善，但其決策成本極低，是現實中決定公共財最適數量的最佳方式。
+    \end{enumerate}
+    解答：
+    \begin{enumerate}[label=\Alph*.]
+        \item 錯誤。林達爾均衡在理論要求每個人支付的租稅等於自己的邊際利益。但在現實中，因為公共財具有非排他性，人們知道就算不付錢也能享受，所以會產生搭便車動機，故意隱藏自己對公共財的真實偏好。因此，它無法有效引導民眾誠實揭露偏好。
+        \item  錯誤。不一定產生穩定均衡：只要選項超過兩個且選民偏好多樣（非單峰偏好），就容易陷入「投票矛盾（Voting paradox / 循環多數決）」。同時，也不保證柏瑞圖效率：多數決只看票數多寡，「忽略了偏好強度」。可能會出現 51\% 的人獲得微小利益，卻讓 49\% 的人遭受巨大損失的情況，這往往不符合整體社會的柏瑞圖效率。
+        \item 正確。林達爾均衡在實務上會出現隱藏偏好的問題；而多數票決則可能出現「投票矛盾（無法得出一致結果）」。
+        \item 錯誤。魏克賽爾主張的絕對無異議票決（Unanimity rule，即全體一致決）確實能保證任何通過的議案都是柏瑞圖改善（因為沒有任何人受損）。但其問題是「決策成本（Decision cost）極高」。因為任何一個人都有否決權，在現實社會中幾乎不可能達成共識，因此並非最佳方式。
+    \end{enumerate}
+
+    \item 二個社會各有五位成員，其所得分別是：社會 1 \([5000, 10000, 15000, 25000, 40000]\)，社會 2 \([5000, 10000, 15000, 30000, 40000]\)。若其他條件不變，政府實施所得重分配政策在那一個社會可能發揮的效果較大？
+    \begin{enumerate}[label=\Alph*.]
+        \item 社會 1，因其中位數所得（median income）小於平均數所得（average income），且差距較社會 2 為大
+        \item 社會 1，因其中位數所得大於平均數所得，且差距較社會 2 為小
+        \item 社會 2，因其中位數所得小於平均數所得，且差距較社會 1 為大
+        \item 社會 2，因其中位數所得大於平均數所得，且差距較社會 1 為小
+    \end{enumerate}
+    解答：
+    \begin{itemize}
+        \item 社會1的所得中位數為15,000、而平均數為19,000
+        \item 社會1的所得中位數為15,000、而平均數為20,000
+    \end{itemize}
+    而中位數平均數差距越大的社會，政府實施所得重分配政策發揮的效果將較大。
+
+\end{enumerate}
+
+
+
+
+
+\end{document}
