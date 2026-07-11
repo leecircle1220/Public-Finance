@@ -37,6 +37,7 @@ Desktop.ini
 *.nav
 *.snm
 *.vrb
+*.xdv
 
 # Python cache, if any
 __pycache__/
