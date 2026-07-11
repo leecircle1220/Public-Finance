@@ -1,0 +1,622 @@
+\documentclass[12pt, a4paper]{article}
+
+%%------------------Preamble------------------%%
+
+    %% 引入Package %%
+\usepackage[margin=2cm]{geometry} % 上下左右距離邊緣3cm
+\usepackage{fancyhdr}   % 頁首頁尾 fancy header
+\usepackage{titling}    % 設定 title,author,date
+\usepackage{mathtools,amsthm,amssymb} % 引入 AMS 數學環境
+\usepackage[shortlabels,inline]{enumitem} %加強 enumerate, itemize 功能
+\usepackage{setspace}
+\usepackage{tcolorbox}
+\usepackage{xcolor} % 用於表格上色
+\usepackage{graphicx}      % 用於縮放表格寬度
+\usepackage{array}
+\usepackage{float} % for [H] float placement
+\tcbuselibrary{breakable}
+\usepackage{tabularx}
+\usepackage{colortbl}
+
+    %% 中文環境，僅限使用 XeLaTeX 編譯器 %%
+\usepackage[CJKmath=true,AutoFakeBold=3,AutoFakeSlant=.2]{xeCJK}
+
+\setCJKmainfont{Noto Serif CJK TC}
+\setCJKsansfont{Noto Sans CJK TC}
+\setCJKmonofont{Noto Sans Mono CJK TC}
+
+\newCJKfontfamily\Kai{Noto Serif CJK TC}
+\newCJKfontfamily\Hei{Noto Sans CJK TC}
+\newCJKfontfamily\NewMing{Noto Serif CJK TC}
+
+\XeTeXlinebreaklocale "zh"
+
+
+
+
+\begin{document}
+
+\title{T4 選擇題解答} % 設定標題
+\author{李原廷} % 設定作者
+\date{\today} % 設定完成日期，也可以使用 \date{\today}
+
+\maketitle
+
+\begin{enumerate}
+
+    \item 若公司盈餘全數會用於投資，今有一政府投資計畫之資金來自提高公司所得稅，則此公共計畫之折現率為：
+    \begin{enumerate}[label=\Alph*.]
+        \item 公司投資之稅前報酬率
+        \item 公司投資之稅後報酬率
+        \item 公司投資之稅前報酬率與稅後報酬率擇一
+        \item 稅前報酬率與稅後報酬率相加除以2
+    \end{enumerate}
+    解答：
+    \begin{itemize}
+        \item 公共投資是以犧牲私部門的投資為代價時，由於公共投資資金的社會機會成本為私部門的投資報酬率，即應以投資的稅前報酬率為折現率。
+        \item 如果公共投資的資金來自稅收，即是以犧牲私部門的消費與投資為代價，則：
+        \begin{itemize}
+            \item 資金是以減少私部門的投資為代價時，政府計劃的機會成本是私部門的稅前報酬率，應以睡前報酬率為折現率。
+            \item 資金是以減少私部門的消費為代價時，應以稅後報酬率為折現率，因為稅後報酬率為衡量個人減少消費時的損失。
+        \end{itemize}
+        \item 資金是同時減少私部門的消費與投資為代價時，則以稅前與稅後報酬率的加權平均為折現率。稅前報酬率之權數等於資金來自投資的比例，而稅後報酬率之權數則等於來自消費的比例。
+    \end{itemize}
+
+    \item 有二個計畫成本相同，\(X\) 計畫確定有 1,000 元的效益；\(Y\) 計畫有 50\% 機率產生 1,600 元的效益、50\% 機率產生 400 元的效益，若考慮風險趨避，則會投資那一計畫？
+    \begin{enumerate}[label=\Alph*.]
+        \item \(X\) 計畫
+        \item \(Y\) 計畫
+        \item \(X\)、\(Y\) 計畫擇一
+        \item \(X\)、\(Y\) 計畫均不投資
+    \end{enumerate}
+    解答：
+    兩個計畫成本相同，因此只需比較效益與風險。
+    \(X\) 計畫的效益是確定的：
+    \[
+    B_X = 1,000
+    \]
+    \(Y\) 計畫的期望效益為：
+    \[
+    E(B_Y) = 0.5 \times 1,600 + 0.5 \times 400
+    \]
+    \[
+    E(B_Y) = 800 + 200 = 1,000
+    \]
+    所以兩個計畫的期望效益相同，都是 1,000 元。
+    但是：
+    \begin{itemize}
+        \item \(X\) 計畫：確定得到 1,000 元
+        \item \(Y\) 計畫：有風險，可能得到 1,600 元，也可能只得到 400 元
+    \end{itemize}
+    若決策者具有風險趨避，在期望效益相同時，會偏好較穩定、較確定的方案。
+    因此應選擇：
+    \[
+    \boxed{X\text{ 計畫}}
+    \]
+
+    \item 公共支出計畫於首年初投入一次性成本 50 億，次年初開始產生利益 3 億元直到永遠。其他條件不變，若社會折現率為 5\%，此計畫的淨現值是：
+    \begin{enumerate}[label=\Alph*.]
+        \item 0
+        \item 10億
+        \item 50億
+        \item 100億
+    \end{enumerate}
+    解答：
+    首年初投入成本 50 億，可視為發生在第 0 期：
+    \[
+    C_0 = 50
+    \]
+    次年初開始，每年產生利益 3 億元，且持續到永遠。因為第一筆利益發生在一年後，所以其現值為永續年金現值：
+    \[
+    PV(B) = \frac{\frac{3}{1.05}}{1-\frac{1}{1.05}} = \frac{3}{1.05} \times\frac{1.05}{0.05} = \frac{3}{0.05} = 60
+    \]
+    因此淨現值為：
+    \[
+    NPV = PV(B) - C_0
+    \]
+    \[
+    NPV = 60 - 50 = 10
+    \]
+    所以此計畫的淨現值是：
+    \[
+    \boxed{10\text{ 億}}
+    \]
+
+    \item 以下關於公共支出案評估的淨利益現值法與益本比法兩者關聯的敘述何者錯誤？
+    \begin{enumerate}[label=\Alph*.]
+        \item 淨利益現值法評估為可行的計畫案，改以益本比評估應為可行
+        \item 淨利益現值為零的計畫案，其益本比應該為一
+        \item 益本比評估為不可行的計畫案，改以淨現值法評估仍不可行
+        \item 淨利益現值法評估為排序優先的計畫案，改以益本比評估仍為排序優先
+    \end{enumerate}
+    解答：
+    淨利益現值法與益本比法的定義如下：
+    \[
+    NPV = PV(B) - PV(C)
+    \]
+    \[
+    B/C = \frac{PV(B)}{PV(C)}
+    \]
+    其中：
+    \begin{itemize}
+        \item \(PV(B)\)：利益現值
+        \item \(PV(C)\)：成本現值
+    \end{itemize}
+    若只判斷單一計畫是否可行，兩者結論通常一致
+    \begin{enumerate}[label=\Alph*.]
+        \item 正確：淨現值為正，益本比會大於 1。
+        \item 淨現值為零，表示利益現值等於成本現值，所以益本比為 1。
+        \item 益本比小於 1，表示利益現值小於成本現值，所以淨現值為負。
+        \item 兩者在「計畫排序」時不一定一致。
+    \end{enumerate}
+    淨現值法重視的是淨利益的絕對大小；益本比法重視的是每一元成本帶來多少利益。所以，淨現值法排序優先的計畫，改用益本比法後不一定仍排序優先。
+
+    \item 其他條件不變，若甲方案的效果高於乙方案，且甲方案的執行成本也高於乙方案，以成本有效性分析評估兩方案時，一般採取何種方式作為比較基礎？
+    \begin{enumerate}[label=\Alph*.]
+        \item 每單位效果的成本最低者
+        \item 總效果高者
+        \item 總成本最低者
+        \item 每單位效果的成本最高者
+    \end{enumerate}
+    解答：
+    成本有效性分析（cost-effectiveness analysis, CEA）適用於：
+    \begin{itemize}
+        \item 方案效果可以用實物單位衡量
+        \item 但效果不容易或不適合轉換成金錢價值
+        \item 例如每救一條生命的成本、每減少一單位污染的成本、每提升一分考試的成本等
+    \end{itemize}
+    題目中：甲方案效果較高，但甲方案成本也較高。乙方案效果較低，但乙方案成本也較低。
+    因此不能只看「總效果」或「總成本」，而要比較：
+    \[
+    \frac{\text{成本}}{\text{效果}}
+    \]
+    也就是每單位效果所需成本。
+    若某方案的每單位效果成本較低，代表用較少成本達成同樣一單位效果，成本有效性較高。
+    所以應選擇：
+    \[
+    \boxed{\text{每單位效果的成本最低者}}
+    \]
+
+    \item 計算跨期公共投資計畫的淨現值需要選擇社會折現率，下列何者不是適當的社會折現率選項？
+    \begin{enumerate}[label=\Alph*.]
+        \item 資本邊際生產力
+        \item 勞動邊際生產力
+        \item 社會時間偏好率
+        \item 社會機會成本率
+    \end{enumerate}
+    解答：
+    社會折現率：社會對現在價值與未來價值的折現率，或社會願意以目前消費交換未來消費之比率。基於以下原因，社會折現率通常應較市場利率（市場報酬率）為低：
+    \begin{itemize}
+        \item 關切下一代：政府應保障未來世代的利益。
+        \item 家長式作風：政府比私人部門更了解未來世代的利益。
+        \item 市場的無效率：當私人生產者進行投資時，可以產生正的外部性，造成市場所提供的投資低於社會最適水準，藉由使用較市場為低的折現率，使公共投資逐增，政府可糾正此無效率。
+    \end{itemize}
+    社會折現率之選擇：
+    \begin{itemize}
+        \item 社會機會成本率：資金若不使用於公共投資，而投入其他生產途徑，所能創造的社會價值。
+        \item 政府借款利率：同時考慮到市場中跨期的資金需求與供給，以及政府良好債信下定下的時間價格。（通常比市場利率低）
+        \item 資本的邊際生產力：即私部門的投資報酬率。
+        \item 社會時間偏好率：社會時間偏好率乃未來消費對目前消費的邊際替代率。
+    \end{itemize}
+    實務上，一般常以政府借款利率作爲折現率，尤其以政府長期公債率作為社會折現率。
+
+    \item 若公共政策的目標明確，決策者在數個可行方案中，選擇執行成本最低的方案，此種決策分析稱為：
+    \begin{enumerate}[label=\Alph*.]
+        \item 成本利益分析
+        \item 成本效用分析
+        \item 成本有效性分析
+        \item 生產效率分析
+    \end{enumerate}
+    解答：
+    題目說：
+	\begin{itemize}
+	    \item 公共政策的目標明確
+        \item 有數個可行方案
+        \item 各方案都能達成目標
+        \item 決策者選擇執行成本最低者
+	\end{itemize}
+    這符合成本有效性分析（cost-effectiveness analysis, CEA）的概念。成本有效性分析通常用於政策效果已明確或可用非貨幣單位衡量時，選擇能以最低成本達成既定目標的方案。
+
+    \item 存在不確定因素時，進行公共支出計畫方案之評估，下列敘述何者正確？
+    \begin{enumerate}[label=\Alph*.]
+        \item 不確定因素不會影響計畫的成本和利益
+        \item 計畫評估時可使用確定等量（certainty equivalence）為評估工具
+        \item 若用保險方式降低風險，保險費不須計入成本或利益
+        \item 政府以自我保險方式降低風險，不會提高計畫成本
+    \end{enumerate}
+    解答：
+    \begin{enumerate}[label=\Alph*.]
+        \item 錯。不確定因素當然會影響計畫成本與利益，例如工程成本上升、需求量不足、災害風險等。
+        \item 對。確定等量法是處理風險與不確定性的重要方法。
+        \item 錯。保險費是為降低風險而支付的成本，應計入計畫成本。
+        \item 錯。自我保險通常需要準備風險基金、分散風險或承擔可能損失，仍可能提高計畫的預期成本或機會成本。
+    \end{enumerate}
+
+    \item 若一公共支出計畫案僅在第 1 年支出 430 萬元，第 2 年到第 5 年之間，每年可以獲益 25 萬元，第 6 年（含）之後每年獲益 20 萬元直到永遠，在社會折現率為 5\% 的情況下，依淨利益現值法該計畫案是否應該執行？
+    \begin{enumerate}[label=\Alph*.]
+        \item 應該執行
+        \item 不應該執行
+        \item 執行與否均無差異
+        \item 無法判斷
+    \end{enumerate}
+    解答：
+    依淨利益現值法：
+    \[
+    NPV = PV(B) - PV(C)
+    \]
+    題目給定：
+    \begin{itemize}
+        \item 第 1 年支出成本：430 萬元
+        \item 第 2 年至第 5 年：每年利益 25 萬元
+        \item 第 6 年起：每年利益 20 萬元，直到永遠
+        \item 社會折現率：\(r = 5\% = 0.05\)
+    \end{itemize}
+    以第 1 年為評估基準點，成本現值為：
+    \[
+    PV(C) = 430
+    \]
+    第 2 年至第 5 年利益現值為：
+    \[
+    PV(B_1)=\frac{25}{1.05}+\frac{25}{(1.05)^2}+\frac{25}{(1.05)^3}+\frac{25}{(1.05)^4}
+    \]
+    \[
+    PV(B_1) \approx 88.65
+    \]
+    第 6 年以後每年 20 萬元直到永遠，屬於永續年金。其在第 5 年的現值為：
+    \[
+    \frac{\frac{20}{1.05}}{1-\frac{1}{1.05}} = \frac{20}{0.05}=400
+    \]
+    再折回第 1 年：
+    \[
+    PV(B_2)=\frac{400}{(1.05)^4}
+    \]
+    \[
+    PV(B_2) \approx 329.08
+    \]
+    所以總利益現值為：
+    \[
+    PV(B)=88.65+329.08=417.73
+    \]
+    淨利益現值為：
+    \[
+    NPV = 417.73 - 430 = -12.27
+    \]
+    因為：
+    \[
+    NPV < 0
+    \]
+    所以此計畫案不應該執行。
+
+    \item 若某一投資計畫估計一年後之名目報酬為 1,100 元，市場利率為 8\%，通貨膨脹率為 2\%，則該計畫報酬之現值為：
+    \begin{enumerate}[label=\Alph*.]
+        \item 1,100元
+        \item 1,019元
+        \item 1,000元
+        \item 943元
+    \end{enumerate}
+    解答：
+    題目給的是「一年後之名目報酬」1,100 元，因此應使用名目市場利率 8\% 折現。
+    現值為：
+    \[
+    PV = \frac{1,100}{1+0.08}
+    \]
+    \[
+    PV = \frac{1,100}{1.08}
+    \]
+    \[
+    PV \approx 1,018.52
+    \]
+    約為：
+    \[
+    \boxed{1,019\text{ 元}}
+    \]
+    通貨膨脹率 2\% 不需另外扣除，因為市場利率 8\% 已是名目利率，應直接用來折現名目報酬。
+
+    \item \(A\) 計畫效益現值為 1,100 元，成本現值為 1,000 元，\(B\) 計畫效益現值為 3,300 元，成本現值為 3,000 元，下列敘述何者錯誤？
+    \begin{enumerate}[label=\Alph*.]
+        \item 以益本比評估，\(A\)、\(B\) 計畫一樣
+        \item 以淨現值法評估，\(B\) 計畫優於 \(A\) 計畫
+        \item 以內部報酬率評估，\(A\)、\(B\) 計畫一樣
+        \item 以社會福利而言，\(A\) 計畫優於 \(B\) 計畫
+    \end{enumerate}
+    解答：
+    益本比
+
+    \(A\) 計畫：
+    \[
+    \frac{B_A}{C_A}=\frac{1,100}{1,000}=1.1
+    \]
+    \(B\) 計畫：
+    \[
+    \frac{B_B}{C_B}=\frac{3,300}{3,000}=1.1
+    \]
+    所以以益本比評估，兩者一樣。
+
+    淨現值
+
+    \(A\) 計畫：
+    \[
+    NPV_A = 1,100 - 1,000 = 100
+    \]
+    \(B\) 計畫：
+    \[
+    NPV_B = 3,300 - 3,000 = 300
+    \]
+    所以以淨現值法評估，\(B\) 計畫優於 \(A\) 計畫。
+
+    以內部報酬率評估，\(A\)、\(B\) 計畫一樣：通常視為正確。因為 \(B\) 計畫的效益與成本皆為 \(A\) 計畫的 3 倍，兩者規模不同但報酬比例相同，因此內部報酬率相同。
+
+    \item 在不完全競爭市場下評估公共投資計畫的效益，應採用下列何價格？
+    \begin{enumerate}[label=\Alph*.]
+        \item 市場價格
+        \item 消費者願付價格
+        \item 邊際生產成本
+        \item 影子價格
+    \end{enumerate}
+    解答：
+    影子價格：將市場價格加以調整，使之趨近於完全競爭價格的一種試算價格（Imputed Price），亦即無其他條件限制的價格。需要用影子價格取代市場價格之情況：
+    \begin{itemize}
+        \item 獨佔或不完全競爭市場。
+        \item 稅負。
+        \item 失業或勞動力的雇用。
+    \end{itemize}
+    在不完全競爭市場下，市場價格通常會偏離邊際成本，無法正確反映資源的真正社會價值或社會機會成本。
+    例如在獨占市場中：
+    \[
+    P > MC
+    \]
+    市場價格包含獨占加價，因此若直接用市場價格評估公共投資計畫的效益或成本，可能會高估或低估真正的社會價值。
+    因此，在公共投資計畫評估中，若市場存在不完全競爭、租稅、補貼、外部性或其他扭曲，應使用影子價格。
+
+    \item 評估投資計畫方案有成本效益分析法和成本有效性分析法，兩者共通之處是：
+    \begin{enumerate}[label=\Alph*.]
+        \item 成本都以貨幣衡量
+        \item 效益都以質性分析衡量
+        \item 成本以貨幣衡量；效益以質性分析衡量
+        \item 成本以質性分析衡量；效益以貨幣衡量
+    \end{enumerate}
+    解答：
+    成本效益分析法與成本有效性分析法的共同點是：成本都會以貨幣單位衡量。兩者差異在於「效益」或「效果」的衡量方式不同。
+    \begin{table}[htbp]
+    \centering
+    \renewcommand{\arraystretch}{1.5} % 稍微增加行高，讓文字不擁擠
+
+    \begin{tabularx}{\linewidth}{|l|l|>{\raggedright\arraybackslash}X|}
+        \hline
+        \textbf{分析方法} & \textbf{成本衡量} & \textbf{效益或效果衡量} \\ \hline
+        成本效益分析法 & 貨幣衡量 & 貨幣衡量 \\ \hline
+        成本有效性分析法 & 貨幣衡量 & 非貨幣單位衡量，例如人數、件數、死亡率、污染量等 \\ \hline
+    \end{tabularx}
+    \end{table}
+
+    例如：
+    \begin{itemize}
+        \item 成本效益分析：某公共建設成本 1 億元，效益現值 1.5 億元。
+        \item 成本有效性分析：某防疫方案成本 1,000 萬元，可減少 500 人感染，計算每減少 1 人感染的成本。
+    \end{itemize}
+
+    \item 下列何者是造成賴賓斯坦（H. Leibenstein）所稱的 \(X\) 無效率（X-inefficiency）的主要原因？
+    \begin{enumerate}[label=\Alph*.]
+        \item 因外部性所造成的社會福利損失
+        \item 因訊息不對稱所導致的市場失靈
+        \item 公用事業因缺乏誘因所導致的經營效率損失
+        \item 因人民對公共財的偏好隱藏所導致的效率損失
+    \end{enumerate}
+    解答：
+    \begin{enumerate}[label=\Alph*.]
+        \item 錯。這是外部性造成的配置無效率，不是 \(X\) 無效率。
+        \item 錯。這屬於逆選擇、道德風險等資訊問題。
+        \item 對。這正是 \(X\) 無效率的核心概念。
+        \item 錯。這是公共財偏好顯示問題或搭便車問題。
+    \end{enumerate}
+
+    \item 有關尖峰定價法的敘述，下列何者錯誤？
+    \begin{enumerate}[label=\Alph*.]
+        \item 短期生產規模無法改變，當公營事業的邊際成本固定，尖峰時段的均衡價格高於邊際成本，均衡數量為最高產能
+        \item 短期生產規模無法改變，當公營事業的邊際成本固定，離峰時段的均衡價格低於邊際成本，均衡數量低於最低產能
+        \item 長期生產規模可以細分，公營事業除了短期生產活動的固定邊際成本外，還有產能調整成本，離峰時段與尖峰時段的均衡價格均等於邊際成本加上產能調整成本
+        \item 長期生產規模無法細分，生產決策可能出現福利損失的狀態
+    \end{enumerate}
+    解答：
+    \begin{enumerate}[label=\Alph*.]
+        \item 正確。短期產能固定下，尖峰時段需求高，若產能限制已達上限，均衡數量會等於最高產能。此時價格會反映產能稀少性，因此：$P_{{\text{peak}}} > MC$
+        \item 錯誤。離峰時段需求較低，產能通常沒有完全使用。此時有效率的價格應等於短期邊際成本，而不是低於邊際成本：$P_{\text{off-peak}} = MC$
+        \item 大致描述長期產能調整的概念。長期若產能可以調整，價格需考慮生產的邊際成本以及產能成本。不過嚴格的尖峰定價模型中，通常是尖峰使用者負擔主要產能成本，離峰價格多半只反映短期邊際成本。
+        \item 正確。若長期產能無法細分，也就是產能具有不可分割性，可能會出現產能過多或不足，導致福利損失。
+    \end{enumerate}
+
+    \item 下列對兩部定價法之敘述，何者正確？
+    \begin{enumerate}[label=\Alph*.]
+        \item 包括離峰價格與尖峰價格兩部分
+        \item 包括平均價格與邊際價格兩部分
+        \item 包括基本費與按量計費兩部分
+        \item 包括到岸價格與離岸價格兩部分
+    \end{enumerate}
+    解答：略
+
+    \item 公用事業的「兩部定價法」，是指那兩種定價策略的搭配使用？
+    \begin{enumerate}[label=\Alph*.]
+        \item 價格上限與價格下限
+        \item 市場價格與政府補貼
+        \item 固定費用與按量計費
+        \item 一次繳納與分期付款
+    \end{enumerate}
+    解答：略
+
+    \item 自然獨占產業為了避免虧損，可採何訂價法以求損益兩平？
+    \begin{enumerate}[label=\Alph*.]
+        \item 邊際收益等於邊際成本
+        \item 平均收益等於平均成本
+        \item 邊際收益等於平均成本
+        \item 平均收益等於邊際成本
+    \end{enumerate}
+    解答：略
+
+    \item 假設政府公用事業為自然獨占廠商，為使資源配置最佳，採邊際成本訂價，則下列敘述何者正確？
+    \begin{enumerate}[label=\Alph*.]
+        \item 可達損益兩平，政府無超額利潤
+        \item 可能產生虧損，政府須另行設法彌補虧損
+        \item 可使資源配置最佳，同時達成利潤最大之目標
+        \item 可產生超額利潤，但非最大利潤
+    \end{enumerate}
+    解答：略
+
+    \item 長期平均成本遞減下之國營事業若採邊際成本訂價，下列敘述何者錯誤？
+    \begin{enumerate}[label=\Alph*.]
+        \item 有賴政府彌補虧損
+        \item 是兼顧經濟效率與分配公平的收費方式
+        \item 可先利用固定基本費的收取來彌補其虧損
+        \item 可達效率產量且不會導致無謂損失
+    \end{enumerate}
+    解答：
+    \begin{enumerate}[B.]
+        \item 邊際成本訂價雖然達成了經濟效率，但無法兼顧分配公平。原因在於國營事業產生的虧損必須由政府稅收來彌補，這會產生要誰來繳稅彌補虧損。也就是說，即便某些納稅人沒有使用或很少使用該項公用服務，卻也要透過繳稅來補貼那些大量使用的消費者，違反了「受益者付費」原則，因此在分配上往往被認為是不公平的。
+    \end{enumerate}
+
+    \item 有關尖峰負載訂價法的敘述，下列何者正確？
+    \begin{enumerate}[label=\Alph*.]
+        \item 主要是用以分擔生產過程中的固定成本
+        \item 只針對尖峰需求（peak demand）進行訂價
+        \item 短期產能固定下，邊際成本訂價可達成效率
+        \item 適用在產出容易儲藏的財貨
+    \end{enumerate}
+    解答：
+    \begin{enumerate}[label=\Alph*.]
+        \item 錯。尖峰負載訂價法的主要目的不是單純分攤固定成本，而是因應不同時段需求高低不同，使價格反映尖峰時段較高的邊際成本或容量成本，以達成資源配置效率。
+        \item 錯。尖峰負載訂價法會同時對尖峰與離峰時段訂定不同價格，而不是只對尖峰時段訂價。通常尖峰價格較高，離峰價格較低。
+        \item 對。在短期產能固定時，若價格能反映不同時段的邊際成本，例如尖峰時段容量較稀少、邊際成本較高，則以邊際成本訂價可以使資源使用達到效率。
+        \item 錯。尖峰負載訂價通常適用於不易儲存或儲存成本很高的財貨或服務，例如電力、交通運輸、電信服務等。
+    \end{enumerate}
+
+    \item 電信業者以收取固定的月租費分攤固定成本，並依邊際成本訂定費率，再根據用戶使用量繳納通話費的方式提供服務，稱為：
+    \begin{enumerate}[label=\Alph*.]
+        \item 邊際成本訂價法
+        \item 二部訂價法
+        \item 成本加成訂價法
+        \item 固定成本訂價法
+    \end{enumerate}
+    解答：略
+
+    \item 下列敘述何者正確？
+    \begin{enumerate}[label=\Alph*.]
+        \item \(X\) 無效率是指國營事業有產品銷售價格偏低的現象
+        \item Averch \& Johnson 效果乃指國營事業有資本使用過多的現象
+        \item 尖峰負荷定價之主要目的是為了追求利潤最大
+        \item 兩部定價（two part tariff）可使產出達於效率且獲得最大利潤
+    \end{enumerate}
+    解答：各選項分析如下：
+    \begin{itemize}
+        \item B（正確）： \\
+        A-J 效果是指當政府對公用事業（或獨佔廠商）採取報酬率管制（Rate of return regulation）時，若政府允許的法定報酬率高於市場的資金成本，廠商為了擴大利潤（因為 \(\text{利潤} = \text{法定報酬率} \times \text{資本總額}\)），會傾向過度投資、購買過多的資本設備。這會導致生產要素的投入比例扭曲，產生\textbf{「資本使用過多」}的無效率現象。
+
+        \item A（錯誤）： \\
+        X-無效率是由經濟學家 Harvey Leibenstein 提出，指的是獨佔或公營事業因為缺乏市場競爭壓力，導致內部管理鬆散、員工怠惰、資源浪費，使得「實際生產成本高於最低可能成本」的現象。這與「產品銷售價格偏低」無關，純粹是內部管理與生產技術上的無效率。
+
+        \item C（錯誤）：\\
+        尖峰負荷定價的主要目的是為了解決尖峰與離峰時段需求差異極大，導致產能規劃困難的問題。其目的是為了\textbf{「追求經濟效率（資源的有效配置）」}，讓造成產能緊繃的尖峰使用者負擔產能成本，並藉由價格機制平滑需求，而非單純為了追求利潤最大化。
+
+        \item D（錯誤）： \\
+        兩部定價規定變動使用費等於邊際成本（\(P=MC\)），確實可以使產出達到\textbf{「社會分配效率（Allocative efficiency）」}。但是，廠商能否獲得「最大利潤」取決於固定費用（入門費）的設定。若要攫取「最大利潤」，廠商必須實施「第一級差別取價（完全差別取價）」，將所有消費者剩餘剝奪。兩部定價通常只能擷取部分的消費者剩餘（通常以需求最低的消費者剩餘來訂定固定費用），因此不一定能達到利潤最大化；在公營事業中，兩部定價的目的通常只是為了「彌補虧損」以達到損益兩平，而非追求最大利潤。
+    \end{itemize}
+
+
+    \item 某一具自然獨占的公用事業，在面對負斜率的需求曲線時，當其分別採邊際成本訂價法、平均成本訂價法，以及最大利潤訂價法時所決定出的產量分別為 \(Q_1\)、\(Q_2\)、\(Q_3\)。下列敘述何者正確？
+    \begin{enumerate}[label=\Alph*.]
+        \item \(Q_1 > Q_2 > Q_3\)
+        \item \(Q_3 > Q_2 > Q_1\)
+        \item \(Q_2 > Q_3 > Q_1\)
+        \item \(Q_3 > Q_1 > Q_2\)
+    \end{enumerate}
+    解答：略
+
+    \item 自然獨占公用事業採取邊際成本定價法最大的缺點是會造：
+    \begin{enumerate}[label=\Alph*.]
+        \item 成公用事業的虧損
+        \item 會造成效率的損失
+        \item 會造成數量的提供太少
+        \item 會造成價格太高
+    \end{enumerate}
+    解答：略
+
+\end{enumerate}
+
+\newpage
+
+\noindent{\Large\textbf{尖峰負荷定價法 (Peak-load Pricing)}}
+\vspace{0.5em} % 標題與內文的間距
+
+\noindent\textbf{(一) 公用事業特性如：}
+\begin{enumerate}[label=\textbf{\arabic*.}, itemsep=0.5em, topsep=0.3em]
+    \item 產品或勞務不具儲存性。
+    \item 短期產品生產能量受限。
+    \item 產品需求呈現波動：在相關時間內分配不均，有尖峰與離峰之分。
+    \begin{itemize}[label=$\circ$, itemsep=0.2em, topsep=0.2em]
+        \item \textbf{離峰時段：}如果產能太大，在此時段的營運成本會造成浪費。
+        \item \textbf{尖峰時段：}如果產能不足，此時段大量使用會產生壅擠問題。
+    \end{itemize}
+\end{enumerate}
+\noindent\textbf{(二) 因為短期內產能難增加，則價格訂定可視為生產規模固定下，追求社會淨效益最大：}
+\begin{enumerate}[label=\textbf{\arabic*.}, itemsep=0.5em, topsep=0.3em]
+    \item 離峰時段使用量會低於規模固定的產量水準，所以，不用承擔擴充能量的成本，在$P = MC$下，離峰時段只有邊際營運成本（operation cost）。
+    \item 尖峰時段原有生產規模不足，會想要增加生產能量，因此，會產生邊際能量成本（capacity cost），由尖峰使用者負擔。
+\end{enumerate}
+\noindent\textbf{(三) 模型分析：}
+由 O.E. Williamson 所提出的尖離峰訂價準則，我們想要求出：
+\begin{equation*}
+    W = (TR_1 + S_1)w_1 + (TR_2 + S_2)w_2 - bQ_1w_1 - bQ_2w_2 - \beta Q_2
+\end{equation*}
+其中：
+\begin{itemize}
+    \item $TR_1, TR_2$分別為離峰與尖峰的總收入
+    \item $S_1, S_2$分別為離峰與尖峰的消費者剩餘
+    \item $w_1, w_2$分別為離峰與尖峰的時間比例
+    \item $Q_1, Q_2$分別為離峰與尖峰的產量
+    \item $b$為邊際營運成本
+    \item $\beta$為邊際能量成本
+\end{itemize}
+FOC：
+\begin{align*}
+    \frac{\partial W}{\partial Q_1} &= p_1w_1 - bw_1 = 0 \implies p_1 = b \\
+    \frac{\partial W}{\partial Q_2} &= p_2w_2 - bw_2 - \beta = 0 \implies p_2 = b + \beta \frac{1}{w_2}
+\end{align*}
+利潤則是為0。
+
+\noindent\textbf{(四) 圖形分析：}
+大致分為長期、短期，以及生產規模可不可以細分。
+
+\newpage
+
+\noindent{\Large\textbf{成本效益分析---各決策準則之比較}}
+\vspace{0.5em} % 標題與內文的間距
+
+\noindent\textbf{(一) 內部報酬率準則（IRR）：}
+\begin{enumerate}[label=\textbf{\arabic*.}, itemsep=0.5em, topsep=0.3em]
+    \item 優點：不受社會折現率選擇之偏高或偏低，以致影響內部報酬率。
+    \item 缺點：
+    \begin{enumerate}[label=\arabic*.]
+        \item 可能出現多重解，而無法判斷，時間越長，所以算出的報酬率個數越多，應用上有些許困難。
+        \item 若淨效益大多在遠期，而負效益大多在近期，則內部報酬率可能越低。
+        \item 兩項互斥計畫規模不同時，若無法複製這些計劃，使用內部報酬率來選擇計劃可能導致不適當結果。
+    \end{enumerate}
+\end{enumerate}
+
+\noindent\textbf{(二) 效益成本比（B/C ratio）：}
+\begin{enumerate}[label=\textbf{\arabic*.}, itemsep=0.5em, topsep=0.3em]
+    \item 效益成本比容易受人為操縱。
+    \item 計劃可行性與比較性結論受社會折現率偏高或偏低之影響。
+\end{enumerate}
+
+\noindent\textbf{(三) 淨效益現值（NPV）：}
+\begin{enumerate}[label=\textbf{\arabic*.}, itemsep=0.5em, topsep=0.3em]
+    \item 優點：
+    \begin{enumerate}[label=\arabic*.]
+        \item 計畫規模不同，仍可以給出正確答案。
+        \item 基於效益與成本之間的差異而非比率，不會受人操縱的影響。
+        \item 最能實現政府支出計劃所追求資源最有效利用及淨社會效益極大的目標。
+    \end{enumerate}
+    \item 缺點：社會折現率的選擇要適當，不同的折現率能使計劃的可行性與比較性給出不同的結論。
+\end{enumerate}
+
+
+
+\end{document}
