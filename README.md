@@ -30,9 +30,9 @@ This repository is part of my **Public Economics** study collection. The followi
 | Repository | Description | Status |
 |:-----------|:------------|:------:|
 | 📙 **Public Finance** | Lecture notes, homework, TA session materials, and supplementary resources. | ✅ |
-| 📘 Public Economics | Advanced topics in public economics. | 🚧 Coming Soon |
-| 📗 Local Public Finance | Local government finance, fiscal decentralization, and intergovernmental transfers. | 🚧 Coming Soon |
-| 📕 Tax Law | Tax law, tax administration, and legal foundations of taxation. | 🚧 Coming Soon |
+| 📘 Contemporary Theory of Public Finance | Advanced lecture notes and supplementary materials on modern public finance theory. | 🚧 Coming Soon |
+| 📗 Public Choice Theory | Lecture notes and readings on public choice theory and political economy. | 🚧 Coming Soon |
+| 📕 Taxation Analysis and Application | Lecture notes and case studies on taxation theory and policy applications. | 🚧 Coming Soon |
 
 > **Note:** The repositories marked as *Coming Soon* will be added in the future as I continue organizing my course notes.
 
