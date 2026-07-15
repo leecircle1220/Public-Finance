@@ -11,6 +11,7 @@
 ## Table of Contents
 
 * [About](#about)
+* [Related Repositories](#related-repositories)
 * [Official Course Resources](#official-course-resources)
 * [Textbook](#textbook)
 * [Repository Structure](#repository-structure)
@@ -20,6 +21,20 @@
 * [Feedback](#feedback)
 * [License](#license)
 
+---
+
+## Related Repositories
+
+This repository is part of my **Public Economics** study collection. The following repositories cover related topics and are intended to complement one another.
+
+| Repository | Description | Status |
+|:-----------|:------------|:------:|
+| 📙 **Public Finance** | Lecture notes, homework, TA session materials, and supplementary resources. | ✅ |
+| 📘 Public Economics | Advanced topics in public economics. | 🚧 Coming Soon |
+| 📗 Local Public Finance | Local government finance, fiscal decentralization, and intergovernmental transfers. | 🚧 Coming Soon |
+| 📕 Tax Law | Tax law, tax administration, and legal foundations of taxation. | 🚧 Coming Soon |
+
+> **Note:** The repositories marked as *Coming Soon* will be added in the future as I continue organizing my course notes.
 
 ---
 
