@@ -11,6 +11,7 @@
 ## Table of Contents
 
 * [About](#about)
+* [Official Course Resources](#official-course-resources)
 * [Textbook](#textbook)
 * [Repository Structure](#repository-structure)
 * [Topics Covered](#topics-covered)
@@ -18,6 +19,7 @@
 * [Notes and Limitations](#notes-and-limitations)
 * [Feedback](#feedback)
 * [License](#license)
+
 
 ---
 
@@ -38,6 +40,16 @@ These materials may be helpful if you are:
 * Looking for additional practice problems and explanations
 
 Please note that this repository is a personal collection of study notes and is not an official course website.
+
+---
+
+## Official Course Resources
+
+The following website is maintained by the course instructor and serves as the official course webpage.
+
+**Course Website:** https://www4.nccu.edu.tw/~joe/PF2025/
+
+> **Note:** This repository is not affiliated with the official course website. Access to the course website requires login credentials. If you are enrolled in the course, please contact the instructor directly to request access.
 
 ---
 
