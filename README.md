@@ -29,12 +29,10 @@ This repository is part of my **Public Economics** study collection. The followi
 
 | Repository | Description | Status |
 |:-----------|:------------|:------:|
-| 📙 **Public Finance** | Lecture notes, homework, TA session materials, and supplementary resources. | ✅ |
-| 📘 Contemporary Theory of Public Finance | Advanced lecture notes and supplementary materials on modern public finance theory. | 🚧 Coming Soon |
-| 📗 Public Choice Theory | Lecture notes and readings on public choice theory and political economy. | 🚧 Coming Soon |
-| 📕 Taxation Analysis and Application | Lecture notes and case studies on taxation theory and policy applications. | 🚧 Coming Soon |
-
-> **Note:** The repositories marked as *Coming Soon* will be added in the future as I continue organizing my course notes.
+| **Public Finance** | Lecture notes, homework, TA session materials, and supplementary resources. | ✅ |
+| **[Contemporary Theory of Public Finance](https://github.com/leecircle1220/Contemporary-Theory-of-Public-Finance.git)** | Advanced lecture notes and supplementary materials on modern public finance theory. | ✅ |
+| **[Public Choice Theory](https://github.com/leecircle1220/Public-Choice-Theory.git)** | Lecture notes and readings on public choice theory and political economy. | ✅ |
+| **[Taxation Analysis and Application](https://github.com/leecircle1220/Taxation-Analysis-and-Application.git)** | Lecture notes and case studies on taxation theory and policy applications. | ✅ |
 
 ---
 
